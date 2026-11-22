@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="JTTY Unicode" width="220">
+</p>
+
 # JTTY Unicode
 
 **JTTY on Android — keyboard-to-keyboard QSOs with full Unicode text.**
