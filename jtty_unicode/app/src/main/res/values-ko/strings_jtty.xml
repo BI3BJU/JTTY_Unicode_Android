@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">운영</string>
+    <string name="jtty_profile_generic">일반</string>
+    <string name="jtty_profile_rtty_roundup">RTTY 라운드업</string>
+    <string name="jtty_profile_field_day">필드 데이</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">콘테스트 프로필</string>
+    <string name="settings_jtty_profile_desc">교환 방식: RTTY 라운드업은 한 프레임에 599 + 시리얼을 전송하고, 필드 데이는 클래스와 섹션을 패킹함</string>
+    <string name="settings_jtty_echo_tx">나의 전송 반향</string>
+    <string name="settings_jtty_echo_tx_desc">받기 창에서 전송한 텍스트를 보여주기, 마치 전신기처럼</string>
+    <string name="settings_jtty_wide_search">전체 패스밴드 디코딩</string>
+    <string name="settings_jtty_wide_search_desc">300Hz에서 2700Hz 사이의 모든 JTTY 스테이션을 인쇄합니다. Off는 RX 주파수 주변에서만 디코딩하므로 배터리를 절약합니다</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">JTTY 수신 중… 디코딩된 내용이 도착하면 여기서 인쇄됩니다.</string>
+    <string name="operate_tx_hint">메시지를 입력하세요 (최대 80자)</string>
+    <string name="operate_send">전송</string>
+    <string name="operate_stop">중지</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">너무 김 — JTTY는 최대 80자까지만 보냅니다</string>
+    <string name="operate_unpackable">해당 텍스트를 보낼 수 없습니다</string>
+    <string name="operate_dx_call">DX 호출</string>
+    <string name="operate_dx_call_hint">디코드를 탭하거나</string>
+    <string name="operate_serial">시리얼</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">QSO 로그</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">먼저 설정에서 자신의 호출부호를 설정하세요</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">기본값으로 재설정</string>
+    <string name="operate_clear">지우기</string>
+    <string name="operate_own_tx">송신</string>
+    <string name="operate_incomplete">(미완료)</string>
+    <string name="operate_sending">전송 중</string>
+    <string name="tx_status_idle">수신 중</string>
+    <string name="tx_rx_offset">RX/TX 오프셋</string>
+</resources>

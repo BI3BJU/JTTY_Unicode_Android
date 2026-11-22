@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Операция</string>
+    <string name="jtty_profile_generic">Общие</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Рандaп</string>
+    <string name="jtty_profile_field_day">Полевой день</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Профиль конкурса</string>
+    <string name="settings_jtty_profile_desc">Как формируются обмены: RTTY Рандaп отправляет 599 + серийный номер в одном кадре, Полевой день включает класс и секцию</string>
+    <string name="settings_jtty_echo_tx">Эхо моих передач</string>
+    <string name="settings_jtty_echo_tx_desc">Показывать текст, который вы отправляете, в окне приема, как телетайп</string>
+    <string name="settings_jtty_wide_search">Декодировать всю полосу пропускания</string>
+    <string name="settings_jtty_wide_search_desc">Печатать все станции JTTY между 300 и 2700 Гц. Выкл. декодирует только вокруг вашей частоты приема, что экономит батарею</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">Прослушивание JTTY… Расшифровки выводятся здесь по мере поступления.</string>
+    <string name="operate_tx_hint">Введите сообщение (максимум 80 символов)</string>
+    <string name="operate_send">Отправить</string>
+    <string name="operate_stop">Стоп</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Слишком длинно — JTTY отправляет максимум 80 символов</string>
+    <string name="operate_unpackable">Этот текст не может быть отправлен</string>
+    <string name="operate_dx_call">Позывной DX</string>
+    <string name="operate_dx_call_hint">Нажмите расшифровку или введите</string>
+    <string name="operate_serial">Серийный</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Журнал QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Сначала установите ваш позывной в настройках</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Сбросить по умолчанию</string>
+    <string name="operate_clear">Очистить</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(неполный)</string>
+    <string name="operate_sending">Отправка</string>
+    <string name="tx_status_idle">Прием</string>
+    <string name="tx_rx_offset">Смещение RX/TX</string>
+</resources>

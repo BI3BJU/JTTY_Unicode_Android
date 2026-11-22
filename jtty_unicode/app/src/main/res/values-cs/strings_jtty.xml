@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Ovládat</string>
+    <string name="jtty_profile_generic">Obecný</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Field Day</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Profil soutěže</string>
+    <string name="settings_jtty_profile_desc">Jak jsou výměny zabaleny: RTTY Roundup pošle 599 + sériové číslo v jednom rámci, Field Day zabaluje třídu a sekci</string>
+    <string name="settings_jtty_echo_tx">Echo mých přenosů</string>
+    <string name="settings_jtty_echo_tx_desc">Zobrazit text, který odesíláte, v přijímacím okně, jako teletype</string>
+    <string name="settings_jtty_wide_search">Dekódovat celou šířku pásma</string>
+    <string name="settings_jtty_wide_search_desc">Vytiskněte všechny JTTY stanice mezi 300 a 2700 Hz. Off dekóduje pouze kolem vaší RX frekvence, což šetří baterii</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">Poslouchám JTTY… Dekódy se tisknou zde, jak přicházejí.</string>
+    <string name="operate_tx_hint">Napište zprávu (max. 80 znaků)</string>
+    <string name="operate_send">Odeslat</string>
+    <string name="operate_stop">Zastavit</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Příliš dlouhé — JTTY posílá maximálně 80 znaků</string>
+    <string name="operate_unpackable">Tento text nelze odeslat</string>
+    <string name="operate_dx_call">DX volání</string>
+    <string name="operate_dx_call_hint">Klepněte na dekódovat nebo napište</string>
+    <string name="operate_serial">Sériové číslo</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Zaznamenej QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Nejprve nastavte svůj volací znak v Nastavení</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Obnovit na výchozí</string>
+    <string name="operate_clear">Vymazat</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(neúplné)</string>
+    <string name="operate_sending">Odesílání</string>
+    <string name="tx_status_idle">Příjem</string>
+    <string name="tx_rx_offset">RX/TX posun</string>
+</resources>

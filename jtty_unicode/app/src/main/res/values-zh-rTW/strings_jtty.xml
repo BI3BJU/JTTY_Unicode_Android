@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">操作</string>
+    <string name="jtty_profile_generic">一般</string>
+    <string name="jtty_profile_rtty_roundup">RTTY 集結賽</string>
+    <string name="jtty_profile_field_day">場地日</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">比賽設定檔</string>
+    <string name="settings_jtty_profile_desc">交換訊息的打包方式：RTTY 集結賽在一個訊框中傳送 599 + 序號，場地日打包班別和組別</string>
+    <string name="settings_jtty_echo_tx">回顯我的傳輸</string>
+    <string name="settings_jtty_echo_tx_desc">在接收視窗中顯示你傳送的文字，就像電傳打字機一樣</string>
+    <string name="settings_jtty_wide_search">解碼整個通道</string>
+    <string name="settings_jtty_wide_search_desc">列印所有位於 300 到 2700 赫茲之間的 JTTY 站。關閉時僅解碼你接收頻率附近的訊號，可節省電池</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">正在偵聽 JTTY… 解碼訊息將在此顯示。</string>
+    <string name="operate_tx_hint">輸入訊息（最多 80 個字元）</string>
+    <string name="operate_send">傳送</string>
+    <string name="operate_stop">停止</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">過長 — JTTY 最多傳送 80 個字元</string>
+    <string name="operate_unpackable">該文字無法傳送</string>
+    <string name="operate_dx_call">DX 呼號</string>
+    <string name="operate_dx_call_hint">點擊解碼或輸入</string>
+    <string name="operate_serial">序列號</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">記錄 QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">請先在設定中設置您的呼號</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">重置為預設值</string>
+    <string name="operate_clear">清除</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(未完成)</string>
+    <string name="operate_sending">發送中</string>
+    <string name="tx_status_idle">接收中</string>
+    <string name="tx_rx_offset">收發偏移</string>
+</resources>

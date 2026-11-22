@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Opérer</string>
+    <string name="jtty_profile_generic">Général</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Journée de terrain</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Profil de concours</string>
+    <string name="settings_jtty_profile_desc">Comment les échanges sont empaquetés : RTTY Roundup envoie 599 + numéro de série dans une seule trame, Field Day empaquette la classe et la section</string>
+    <string name="settings_jtty_echo_tx">Faire un écho de mes transmissions</string>
+    <string name="settings_jtty_echo_tx_desc">Afficher le texte que vous envoyez dans la fenêtre de réception, comme une téléscripteur</string>
+    <string name="settings_jtty_wide_search">Décoder toute la bande passante</string>
+    <string name="settings_jtty_wide_search_desc">Imprimez chaque station JTTY entre 300 et 2700 Hz. Off ne décode qu\'autour de votre fréquence RX, ce qui économise la batterie</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">Écoute JTTY… Les décodages s\'affichent ici dès leur arrivée.</string>
+    <string name="operate_tx_hint">Tapez un message (max 80 caractères)</string>
+    <string name="operate_send">Envoyer</string>
+    <string name="operate_stop">Arrêter</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Trop long — JTTY envoie au maximum 80 caractères</string>
+    <string name="operate_unpackable">Ce texte ne peut pas être envoyé</string>
+    <string name="operate_dx_call">Indicatif DX</string>
+    <string name="operate_dx_call_hint">Appuyez sur décoder ou tapez</string>
+    <string name="operate_serial">Numéro de série</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Enregistrer QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Définissez d\'abord votre indicatif dans les Paramètres</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Réinitialiser par défaut</string>
+    <string name="operate_clear">Effacer</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(incomplet)</string>
+    <string name="operate_sending">Envoi</string>
+    <string name="tx_status_idle">Réception</string>
+    <string name="tx_rx_offset">Décalage RX/TX</string>
+</resources>

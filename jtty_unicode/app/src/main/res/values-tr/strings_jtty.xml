@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Çalıştır</string>
+    <string name="jtty_profile_generic">Genel</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Field Day</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Yarışması profili</string>
+    <string name="settings_jtty_profile_desc">Değişimlerin nasıl paketlendiği: RTTY Roundup 599+ seri dosyayı tek karede gönderir, Field Day paketleri sınıf ve bölüm</string>
+    <string name="settings_jtty_echo_tx">Echo my transmissions gönderir Gönderdiğiniz</string>
+    <string name="settings_jtty_echo_tx_desc">metni alıcı penceresinde gösterin, teleprinter</string>
+    <string name="settings_jtty_wide_search">gibi Tüm geçiş bandını çözün Tüm</string>
+    <string name="settings_jtty_wide_search_desc">geçiş bandını 300 ile 2700 Hz arasında yazdırın. Sadece RX frekansınız civarında kapalı kod çözer, bu da pil tasarrufu sağlar</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">JTTY dinleniyor… Gelen mesajlar burada çözülür.</string>
+    <string name="operate_tx_hint">Bir mesaj yazın (en fazla 80 karakter)</string>
+    <string name="operate_send">Gönder</string>
+    <string name="operate_stop">Durdur</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Çok uzun — JTTY en fazla 80 karakter gönderir</string>
+    <string name="operate_unpackable">Bu metin gönderilemez</string>
+    <string name="operate_dx_call">DX çağrısı</string>
+    <string name="operate_dx_call_hint">Bir çözümü dokunun veya yazın</string>
+    <string name="operate_serial">Seri</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">QSO Kaydet</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Önce Ayarlarda çağrı işaretinizi belirleyin</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Varsayılana sıfırla</string>
+    <string name="operate_clear">Temizle</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(tamamlanmadı)</string>
+    <string name="operate_sending">Gönderiliyor</string>
+    <string name="tx_status_idle">Alınıyor</string>
+    <string name="tx_rx_offset">RX/TX kaydırması</string>
+</resources>

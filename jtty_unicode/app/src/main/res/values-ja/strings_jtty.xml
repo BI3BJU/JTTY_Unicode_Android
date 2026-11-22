@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">操作する</string>
+    <string name="jtty_profile_generic">一般的な</string>
+    <string name="jtty_profile_rtty_roundup">RTTYラウンドアップ</string>
+    <string name="jtty_profile_field_day">フィールドデー</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">コンテストプロフィール</string>
+    <string name="settings_jtty_profile_desc">交換方法のパッキング方法：RTTYラウンドアップは599 + シリアルを1フレームで送信、フィールドデーではクラスとセクションをパック</string>
+    <string name="settings_jtty_echo_tx">自分の送信をエコーする</string>
+    <string name="settings_jtty_echo_tx_desc">テレプリンタのように、受信ウィンドウに送信したテキストを表示する</string>
+    <string name="settings_jtty_wide_search">全帯域をデコードする</string>
+    <string name="settings_jtty_wide_search_desc">300 Hzから2700 Hzの間のすべてのJTTY局を印刷します。OffはRX周波数付近のみをデコードするため、バッテリーを節約します</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">JTTYを待機中…デコードは到着次第ここに表示されます。</string>
+    <string name="operate_tx_hint">メッセージを入力（最大80文字）</string>
+    <string name="operate_send">送信</string>
+    <string name="operate_stop">停止</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">長すぎます — JTTYは最大80文字まで送信可能です</string>
+    <string name="operate_unpackable">そのテキストは送信できません</string>
+    <string name="operate_dx_call">DXコール</string>
+    <string name="operate_dx_call_hint">デコードをタップするか、</string>
+    <string name="operate_serial">シリアル</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">QSOを記録</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">まず設定でコールサインを設定</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">デフォルトにリセット</string>
+    <string name="operate_clear">クリア</string>
+    <string name="operate_own_tx">送信</string>
+    <string name="operate_incomplete">(未完)</string>
+    <string name="operate_sending">送信中</string>
+    <string name="tx_status_idle">受信中</string>
+    <string name="tx_rx_offset">受信/送信オフセット</string>
+</resources>

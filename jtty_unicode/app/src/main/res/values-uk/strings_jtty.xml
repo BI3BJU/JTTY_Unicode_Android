@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Керувати</string>
+    <string name="jtty_profile_generic">Загальні</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Field Day</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Профіль змагань</string>
+    <string name="settings_jtty_profile_desc">Як пакуються обміни: RTTY Roundup відправляє 599 + серійний номер в одному кадрі, Field Day пакує клас і секцію</string>
+    <string name="settings_jtty_echo_tx">Відображати мої передачі</string>
+    <string name="settings_jtty_echo_tx_desc">Показати текст, який ви відправляєте, у вікні прийому, як телетайп</string>
+    <string name="settings_jtty_wide_search">Декодувати всю смугу пропускання</string>
+    <string name="settings_jtty_wide_search_desc">Друкувати кожну станцію JTTY між 300 і 2700 Гц. Off декодує лише навколо вашої частоти RX, що економить батарею</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">Слухати JTTY… Декодування виводиться тут по мірі надходження.</string>
+    <string name="operate_tx_hint">Введіть повідомлення (макс. 80 символів)</string>
+    <string name="operate_send">Надіслати</string>
+    <string name="operate_stop">Зупинити</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Занадто довго — JTTY надсилає максимум 80 символів</string>
+    <string name="operate_unpackable">Цей текст не можна надіслати</string>
+    <string name="operate_dx_call">DX позивний</string>
+    <string name="operate_dx_call_hint">Торкніться декодування або введіть</string>
+    <string name="operate_serial">Серійний</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Зареєструвати QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Спочатку встановіть свій позивний у Налаштуваннях</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Скинути до стандартного</string>
+    <string name="operate_clear">Очистити</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(неповний)</string>
+    <string name="operate_sending">Надсилається</string>
+    <string name="tx_status_idle">Отримується</string>
+    <string name="tx_rx_offset">Зсув RX/TX</string>
+</resources>

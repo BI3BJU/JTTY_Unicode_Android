@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">تشغيل</string>
+    <string name="jtty_profile_generic">عام</string>
+    <string name="jtty_profile_rtty_roundup">تجمع RTTY</string>
+    <string name="jtty_profile_field_day">يوم الميدان</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">ملف المسابقة</string>
+    <string name="settings_jtty_profile_desc">كيفية تعبئة التبادلات: يرسل تجمع RTTY 599 + التسلسل في إطار واحد، ويعبئ يوم الميدان الفئة والقسم</string>
+    <string name="settings_jtty_echo_tx">عكس إرسالياتي</string>
+    <string name="settings_jtty_echo_tx_desc">عرض النص الذي ترسله في نافذة الاستقبال، مثل الآلة الكاتبة عن بُعد</string>
+    <string name="settings_jtty_wide_search">فك تشفير كامل نطاق التمرير</string>
+    <string name="settings_jtty_wide_search_desc">اطبع كل محطة JTTY بين 300 و 2700 هرتز. إيقاف يفك التشفير فقط حول تردد الاستقبال الخاص بك، مما يوفر البطارية</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">الاستماع إلى JTTY… تظهر الأكواد هنا عند وصولها.</string>
+    <string name="operate_tx_hint">اكتب رسالة (بحد أقصى 80 حرفًا)</string>
+    <string name="operate_send">إرسال</string>
+    <string name="operate_stop">إيقاف</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">طويل جدًا — يرسل JTTY كحد أقصى 80 حرفًا</string>
+    <string name="operate_unpackable">لا يمكن إرسال هذا النص</string>
+    <string name="operate_dx_call">نداء DX</string>
+    <string name="operate_dx_call_hint">اضغط على فك التشفير أو اكتب</string>
+    <string name="operate_serial">السيريال</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">تسجيل QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">قم بتعيين رمز الاتصال الخاص بك أولاً في الإعدادات</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">إعادة إلى الافتراضي</string>
+    <string name="operate_clear">مسح</string>
+    <string name="operate_own_tx">إرسال</string>
+    <string name="operate_incomplete">(غير مكتمل)</string>
+    <string name="operate_sending">جارٍ الإرسال</string>
+    <string name="tx_status_idle">جارٍ الاستلام</string>
+    <string name="tx_rx_offset">إزاحة الاستقبال/الإرسال</string>
+</resources>

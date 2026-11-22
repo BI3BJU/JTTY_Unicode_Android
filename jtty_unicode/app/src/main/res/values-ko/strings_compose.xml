@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Compose UI strings (JTTYAF). The live app is the Jetpack Compose UI under
+  ~ com.bi3bju.jttyaf_plus; these are its user-facing strings, externalized for
+  ~ localization. The legacy strings.xml entries belong to the unreachable old
+  ~ XML/Fragment UI and are NOT used by the running app.
+  ~
+  ~ Translations live in values-<locale>/strings_compose.xml. English here is the
+  ~ source of truth — keep it byte-identical to the original UI text so the English
+  ~ layout never changes. Ham-radio abbreviations (CQ, QSO, DXCC, POTA, SOTA, RST)
+  ~ are intentionally left untranslated across all locales.
+-->
+<resources>
+
+    <!-- ===== Common / shared ===== -->
+    <string name="action_cancel">취소</string>
+    <string name="action_save">저장</string>
+    <string name="action_done">완료</string>
+    <string name="action_ok">OK</string>
+    <string name="action_exit">종료</string>
+    <string name="common_none">없음</string>
+    <string name="common_off">끔</string>
+    <string name="common_not_configured">설정 안 됨</string>
+    <string name="common_not_connected">연결 안 됨</string>
+    <string name="common_pass">통과</string>
+    <string name="common_fail">실패</string>
+    <string name="common_test_connection">연결 테스트</string>
+
+    <!-- ===== Continents ===== -->
+    <string name="continent_na">북아메리카</string>
+    <string name="continent_sa">남아메리카</string>
+    <string name="continent_eu">유럽</string>
+    <string name="continent_af">아프리카</string>
+    <string name="continent_as">아시아</string>
+    <string name="continent_oc">오세아니아</string>
+    <string name="continent_an">남극</string>
+
+    <!-- ===== Bottom navigation tabs ===== -->
+    <string name="tab_decode">디코드</string>
+    <string name="tab_map">지도</string>
+    <string name="tab_waterfall">워터폴</string>
+    <string name="tab_pota">POTA</string>
+    <string name="tab_logbook">로그북</string>
+    <string name="tab_settings">설정</string>
+
+    <!-- ===== Status pills (decode list badges) ===== -->
+    <string name="status_new_dxcc">신규 DXCC</string>
+    <string name="status_new_grid">신규 GRID</string>
+    <string name="status_new_band">신규 BAND</string>
+    <string name="status_pota">POTA</string>
+    <string name="status_new_pota">신규 POTA</string>
+    <string name="status_sota">SOTA</string>
+    <string name="status_needed">필요</string>
+    <string name="status_worked">교신함</string>
+    <string name="status_confirmed">확인됨</string>
+    <string name="status_cq">CQ</string>
+    <string name="status_pending">대기 중</string>
+
+    <!-- ===== Splash / app-level ===== -->
+    <string name="splash_tagline">Support the transmission of Unicode codes</string>
+    <string name="splash_initializing">무전기 초기화 중</string>
+    <string name="splash_version">v%1$s · 빌드 %2$s</string>
+    <string name="app_set_callsign_first">CQ를 호출하기 전에 설정에서 콜사인을 입력하세요</string>
+    <string name="app_hunt_on">Hunt 켜짐 — CQ 자동 응답</string>
+    <string name="app_hunt_off">Hunt 꺼짐 — CQ 운용, 응답만 처리</string>
+    <string name="app_mode_switched">모드: %1$s</string>
+    <string name="app_mode_switch_busy">송신 중에는 모드를 전환할 수 없습니다</string>
+    <string name="main_tx_volume">TX 볼륨: %1$d%%</string>
+
+    <!-- ===== Exit dialog ===== -->
+    <string name="exit_title">JTTYAF를 종료할까요?</string>
+    <string name="exit_message">앱을 닫으시겠습니까? 진행 중인 QSO는 취소됩니다.</string>
+
+    <!-- ===== Frequency picker ===== -->
+    <string name="freq_select_title">주파수 선택</string>
+    <string name="freq_show_alternates">대체 주파수 표시</string>
+    <string name="freq_hide_alternates">대체 주파수 숨기기</string>
+    <string name="freq_alt_prefix">"ALT "</string>
+
+    <!-- ===== Operator card ===== -->
+    <string name="op_no_call">콜사인 없음</string>
+    <string name="op_no_grid">그리드 미설정</string>
+    <string name="op_tap_to_edit">탭하여 편집</string>
+    <string name="op_stat_rig">무전기</string>
+    <string name="op_stat_antenna">안테나</string>
+    <string name="op_stat_power">출력</string>
+
+    <!-- ===== Export log sheet ===== -->
+    <string name="export_title">QSO 내보내기</string>
+    <string name="export_date_range">날짜 범위</string>
+    <string name="export_date_from_placeholder">"시작  YYYYMMDD"</string>
+    <string name="export_date_to_placeholder">"종료  YYYYMMDD"</string>
+    <string name="export_share">공유</string>
+    <string name="export_filter_confirmed">확인된 것만</string>
+    <string name="export_filter_unconfirmed">미확인만</string>
+    <string name="export_record_singular">건</string>
+    <string name="export_record_plural">건</string>
+    <string name="export_summary_all">전체</string>
+    <string name="export_summary_key">\'%1$s\'</string>
+    <string name="export_summary_suffix">" · %1$s"</string>
+    <string name="export_summary">%3$s%4$s에 일치하는 %1$d%2$s</string>
+    <string name="export_preparing">준비 중…</string>
+    <string name="export_share_chooser_title">QSO 로그 공유</string>
+    <string name="export_saved_to">%1$s에 저장됨</string>
+    <string name="export_save_failed">다운로드로 저장 실패</string>
+    <string name="export_temp_file_failed">임시 파일을 만들 수 없습니다</string>
+
+    <!-- ===== TX strip ===== -->
+    <string name="tx_transmitting">송신 중</string>
+    <string name="tx_listening">수신 중</string>
+    <string name="tx_hunt">Hunt</string>
+    <string name="tx_call_cq">CQ 호출</string>
+    <string name="tx_stop">정지</string>
+
+    <!-- ===== Hound (DXpedition) setup ===== -->
+    <string name="hound_title">DX 페디션 교신 (Hound)</string>
+    <string name="hound_help">먼저 무전기를 Fox가 공지한 다이얼 주파수로 맞추세요. 높은 쪽(1000–4000 Hz)으로 호출하면, 앱이 Fox가 응답하는 주파수로 자동 QSY하여 리포트로 응답합니다.</string>
+    <string name="hound_fox_callsign">Fox 콜사인</string>
+    <string name="hound_call_frequency">호출 주파수 (Hz, 1000–4000)</string>
+    <string name="hound_start">시작</string>
+
+    <!-- ===== CAT status chip ===== -->
+    <string name="cat_status_chip_label">CAT</string>
+    <string name="cat_status_connected">CAT 연결됨 — 탭하여 재연결</string>
+    <string name="cat_status_connecting">CAT 연결 중…</string>
+    <string name="cat_status_disconnected">CAT 연결 끊김 — 탭하여 연결</string>
+    <string name="cat_status_error">CAT 연결 오류 — 탭하여 재시도</string>
+
+    <!-- ===== SWR lockout banner ===== -->
+    <string name="swr_lockout_title">TX 중단 — 높은 SWR 감지 (%1$s)</string>
+    <string name="swr_lockout_body">송신 전에 안테나 / 급전선을 확인하세요.</string>
+    <string name="swr_lockout_dismiss">닫기</string>
+    <string name="swr_lockout_toast">TX 차단됨 — SWR 잠금 활성. 먼저 잠금 배너를 닫으세요.</string>
+
+    <!-- ===== Active QSO panel ===== -->
+    <string name="qsopanel_calling_cq">CQ 호출 중</string>
+    <string name="qsopanel_hunting">Listening for CQ</string>
+    <string name="qsopanel_searching">검색 중...</string>
+    <string name="qsopanel_qsoing_with">%1$s와 QSO 중</string>
+    <string name="qsopanel_waiting_for">%1$s 대기 중</string>
+    <string name="qsopanel_tap_to_view">탭하여 보기 ↗</string>
+    <string name="qsopanel_tx_message">TX: %1$s</string>
+    <string name="qsopanel_waiting_messages">메시지 대기 중...</string>
+    <string name="qsopanel_log_action">기록</string>
+    <string name="qsopanel_queue">대기열</string>
+
+    <!-- ===== Decode screen ===== -->
+    <string name="decode_title">디코드</string>
+    <string name="decode_subtitle">"%1$s  •  이번 주기에 %2$d개 디코드"</string>
+    <string name="decode_clear_list">디코드 목록 지우기</string>
+    <string name="decode_utc_placeholder">UTC : --:--:--</string>
+    <string name="decode_time_group_utc">%1$s UTC</string>
+    <string name="decode_filter_all">전체</string>
+    <string name="decode_filter_cq_calls">CQ 호출</string>
+    <string name="decode_filter_cq_pota">CQ POTA</string>
+    <string name="decode_filter_new_dxcc">신규 DXCC</string>
+    <string name="decode_filter_needed">필요</string>
+    <string name="decode_filter_for_me">나에게</string>
+    <string name="decode_empty_cq_title">CQ 호출 없음</string>
+    <string name="decode_empty_cq_body">지금 이 밴드에서 CQ를 호출하는 국이 없습니다.</string>
+    <string name="decode_empty_pota_title">POTA 스폿 없음</string>
+    <string name="decode_empty_pota_body">아직 이 밴드에서 디코드된 공원 운용이 없습니다 — 스폿 목록은 POTA → Hunt에서 확인하세요.</string>
+    <string name="decode_empty_dxcc_title">신규 DXCC 없음</string>
+    <string name="decode_empty_dxcc_body">아직 미교신 DXCC 엔티티가 디코드되지 않았습니다.</string>
+    <string name="decode_empty_needed_title">필요한 항목 없음</string>
+    <string name="decode_empty_needed_body">확인이 필요한 국을 찾지 못했습니다.</string>
+    <string name="decode_empty_forme_title">나를 호출하는 국 없음</string>
+    <string name="decode_empty_forme_body">지금 당신의 콜사인을 호출하는 국이 없습니다.</string>
+    <string name="decode_empty_default_title">디코드된 신호 없음</string>
+    <string name="decode_empty_default_body">%1$s 신호가 나타나기를 기다리는 중...</string>
+    <string name="decode_label_calling">→ 호출 중</string>
+    <string name="decode_label_cq">CQ</string>
+    <string name="decode_label_to_you">↓ 나에게</string>
+
+    <!-- ===== QSO sheet ===== -->
+    <string name="qso_complete">QSO 완료</string>
+    <string name="qso_call_action">%1$s 호출</string>
+    <string name="qso_qrz_link">QRZ ↗</string>
+    <string name="qso_stat_signal">신호</string>
+    <string name="qso_stat_distance">거리</string>
+    <string name="qso_stat_azimuth">방위각</string>
+    <string name="qso_stat_band">밴드</string>
+    <string name="qso_sequence_header">QSO 시퀀스</string>
+    <string name="qso_step_send_call">호출 전송</string>
+    <string name="qso_step_report_sent">리포트 전송됨</string>
+    <string name="qso_step_roger">Roger</string>
+    <string name="qso_step_confirm">확인</string>
+    <string name="qso_step_logged">기록됨</string>
+    <string name="qso_live_sending">%1$s와 QSO 중 — %2$s 전송 중</string>
+    <string name="qso_live_waiting">%1$s의 응답 대기 중…</string>
+    <string name="qso_live_transmitting">송신 중…</string>
+    <string name="qso_live_step_fallback">메시지</string>
+    <string name="qso_tx_now">지금 TX</string>
+    <string name="qso_tx_next">다음 TX</string>
+
+    <!-- ===== Logbook ===== -->
+    <string name="log_tab_stats">통계</string>
+    <string name="log_tab_recent">최근</string>
+    <string name="log_tab_awards">어워드</string>
+    <string name="log_title">로그북</string>
+    <string name="log_subtitle_qsos_all_bands">%1$d QSO · 전 밴드</string>
+    <string name="log_cd_sync_to_logging_services">로깅 서비스에 동기화</string>
+    <string name="log_cd_export_qsos">QSO 내보내기</string>
+    <string name="log_stat_total_qsos">총 QSO</string>
+    <string name="log_stat_dxcc_entities">DXCC 엔티티</string>
+    <string name="log_stat_cq_zones">CQ 존</string>
+    <string name="log_stat_itu_zones">ITU 존</string>
+    <string name="log_section_band_distribution">밴드 분포</string>
+    <string name="log_section_award_progress">어워드 진행도</string>
+    <string name="log_award_dxcc_mixed">DXCC Mixed</string>
+    <string name="log_award_vucc_grid_squares">VUCC 그리드</string>
+    <string name="log_award_dxcc_challenge">DXCC Challenge</string>
+    <string name="log_section_grid_coverage">그리드 커버리지</string>
+    <string name="log_section_signal_trend">신호 추이</string>
+    <string name="log_no_qsos_yet">아직 QSO 없음</string>
+    <string name="log_no_qsos_recorded_yet">아직 기록된 QSO 없음</string>
+    <string name="log_state_usa">%1$s, USA</string>
+    <string name="log_cd_qso_actions">QSO 작업</string>
+    <string name="log_action_edit">편집</string>
+    <string name="log_action_delete">삭제</string>
+    <string name="log_award_dxcc_mixed_desc">임의의 밴드/모드에서 100개 DXCC 엔티티 교신 및 확인</string>
+    <string name="log_award_was">WAS</string>
+    <string name="log_award_was_desc">미국 50개 주 모두 교신 및 확인</string>
+    <string name="log_award_waz">WAZ</string>
+    <string name="log_award_waz_desc">CQ 존 40개 모두 교신 및 확인</string>
+    <string name="log_award_vucc">VUCC</string>
+    <string name="log_award_vucc_desc">VHF/UHF Century Club -- 단일 밴드에서 그리드 100개</string>
+    <string name="log_award_iota">IOTA</string>
+    <string name="log_award_iota_desc">Islands on the Air -- 지정된 섬의 국과 교신</string>
+    <string name="log_edit_qso">QSO 편집</string>
+    <string name="log_field_callsign">콜사인</string>
+    <string name="log_field_grid_locator">그리드 로케이터</string>
+    <string name="log_field_mode">모드</string>
+    <string name="log_delete_qso_title">QSO를 삭제할까요?</string>
+    <string name="log_delete_qso_body_callsign">%1$s와의 QSO를 로그북에서 삭제할까요? 되돌릴 수 없습니다.</string>
+    <string name="log_delete_qso_body">이 QSO를 로그북에서 삭제할까요? 되돌릴 수 없습니다.</string>
+    <string name="log_sync_title_no_services">활성화된 서비스 없음</string>
+    <string name="log_sync_title_syncing">동기화 중…</string>
+    <string name="log_sync_title_complete">동기화 완료</string>
+    <string name="log_sync_enable_services">설정에서 Cloudlog/Wavelog/Nextlog, QRZ 또는 World Radio League를 활성화한 후 다시 시도하세요.</string>
+    <string name="log_sync_progress_count">%2$d개 중 %1$d개 QSO</string>
+    <string name="log_sync_cloudlog_accepted">Cloudlog / Wavelog / Nextlog: %1$d개 수락됨</string>
+    <string name="log_sync_qrz_accepted">QRZ: %1$d개 수락됨</string>
+    <string name="log_sync_nothing_to_upload">아직 업로드할 QSO가 로그북에 없습니다.</string>
+    <string name="log_sync_working">처리 중…</string>
+
+    <!-- ===== POTA ===== -->
+    <string name="pota_tab_activate">운용</string>
+    <string name="pota_tab_hunt">Hunt</string>
+    <string name="pota_tab_history">기록</string>
+    <!-- POTA contact row: time since the QSO. %d is the count in that unit. -->
+    <string name="pota_qso_age_just_now">방금</string>
+    <plurals name="pota_qso_age_seconds">
+        <item quantity="other">%d초 전</item>
+    </plurals>
+    <plurals name="pota_qso_age_minutes">
+        <item quantity="other">%d분 전</item>
+    </plurals>
+    <plurals name="pota_qso_age_hours">
+        <item quantity="other">%d시간 전</item>
+    </plurals>
+    <plurals name="pota_qso_age_days">
+        <item quantity="other">%d일 전</item>
+    </plurals>
+    <string name="pota_qso_time_show_utc">UTC 시간 표시</string>
+    <string name="pota_start_activation">운용 시작</string>
+    <string name="pota_park_reference_label">공원 참조 (예: K-1234)</string>
+    <string name="pota_notes_optional_label">메모 (선택)</string>
+    <string name="pota_enter_park_reference_first">먼저 공원 참조를 입력하세요</string>
+    <string name="pota_activating">%1$s 운용 중</string>
+    <string name="pota_activation_ended">운용 종료됨</string>
+    <string name="pota_set_callsign_first">먼저 설정에서 콜사인을 입력하세요</string>
+    <string name="pota_self_spot_posted">셀프 스폿 게시됨</string>
+    <string name="pota_self_spot_failed">셀프 스폿 실패 — 로그 확인</string>
+    <string name="pota_active_park">운용 중 — %1$s</string>
+    <string name="pota_qsos">QSO</string>
+    <string name="pota_dupe">중복</string>
+    <string name="pota_contacts_map">교신 지도</string>
+    <string name="pota_back">뒤로</string>
+    <string name="pota_valid_activation">유효한 운용</string>
+    <string name="pota_to_valid">유효까지 %1$d</string>
+    <string name="pota_elapsed">경과</string>
+    <string name="pota_since_start">시작 이후</string>
+    <string name="pota_self_spot">셀프 스폿</string>
+    <string name="pota_end_activation">운용 종료</string>
+    <string name="pota_notes_quote">“%1$s”</string>
+    <string name="pota_tx_cq_preview">TX CQ는 “CQ POTA %1$s %2$s”로 송신됩니다.</string>
+    <string name="pota_no_spots">지금 FT8 POTA 스폿이 없습니다.</string>
+    <string name="pota_active_spots">활성 FT8 스폿 %1$d개</string>
+    <string name="pota_targeting">%1$s @ %2$s kHz (%3$s) 타겟 — 호출하려면 디코드로 전환</string>
+    <string name="pota_no_past_activations">아직 지난 운용이 없습니다.</string>
+    <string name="pota_no_browser_available">사용 가능한 브라우저 없음</string>
+    <string name="pota_export_failed">내보내기 실패 — 로그 확인</string>
+    <string name="pota_status_active">활성</string>
+    <string name="pota_qso_count">%1$d QSO</string>
+    <string name="pota_share_adif">ADIF 공유</string>
+    <string name="pota_open_pota_app">pota.app 열기</string>
+    <string name="pota_upload_to_pota">POTA에 업로드</string>
+    <string name="pota_upload_success">공원 로그 %1$d개를 POTA에 업로드함</string>
+    <string name="pota_upload_failed">업로드 실패: %1$s</string>
+    <string name="pota_upload_server_error">POTA가 업로드를 처리하지 못했습니다. 공원 참조가 유효하고 콜사인이 POTA에 등록되어 있는지 확인한 후 다시 시도하세요.</string>
+    <string name="pota_upload_busy">POTA 서버를 일시적으로 사용할 수 없습니다. 여러 번 다시 시도했지만 실패했습니다 — 몇 분 후에 다시 시도하세요.</string>
+    <string name="pota_upload_network_error">POTA에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.</string>
+    <string name="pota_login_title">POTA에 로그인</string>
+    <string name="pota_login_desc">pota.app 계정 이메일과 비밀번호를 사용하세요.</string>
+    <string name="pota_login_email">이메일</string>
+    <string name="pota_login_password">비밀번호</string>
+    <string name="pota_login_button">로그인</string>
+    <string name="pota_login_cancel">취소</string>
+    <string name="pota_login_failed">로그인 실패: %1$s</string>
+    <string name="pota_login_or">또는</string>
+    <string name="pota_login_social">Google / Facebook / Amazon으로 로그인</string>
+    <string name="pota_oauth_title">POTA에 로그인</string>
+    <string name="pota_add_park">공원 추가</string>
+    <string name="pota_remove_park">제거</string>
+    <string name="pota_max_parks_reached">최대 10개 공원에 도달함</string>
+    <string name="pota_spotted_n_parks">%1$d개 공원에서 스폿됨</string>
+    <string name="pota_parks_more">+%1$d개 더</string>
+
+    <!-- ===== Debug log / Map / Waterfall ===== -->
+    <string name="debug_title">디버그</string>
+    <string name="debug_line_count">%1$d줄</string>
+    <string name="debug_logcat_on_suffix">" · logcat ON"</string>
+    <string name="debug_close">닫기</string>
+    <string name="debug_share">공유</string>
+    <string name="debug_clear">지우기</string>
+    <string name="debug_logcat_on">Logcat: 켜짐</string>
+    <string name="debug_logcat_off">Logcat: 꺼짐</string>
+    <string name="debug_no_log_file">로그 파일 없음</string>
+    <string name="debug_log_cleared">로그 지워짐</string>
+    <string name="debug_share_chooser_title">debug.log 공유</string>
+    <string name="map_title">지도</string>
+    <string name="map_no_grid_set">그리드 미설정</string>
+    <string name="map_station_count">%1$d개 국</string>
+    <string name="map_station_count_with_heard">%1$d개 국 · %2$d개 수신</string>
+    <string name="map_psk_error">PSK Reporter 사용 불가: %1$s</string>
+    <string name="map_projection_equirectangular">등장방형 도법</string>
+    <string name="map_projection_azimuthal">방위 등거리 도법</string>
+    <string name="map_mode_standard">STD</string>
+    <string name="map_mode_azimuthal">AZ</string>
+    <string name="map_overlay_psk">PSK</string>
+    <string name="map_info_distance">거리</string>
+    <string name="map_info_bearing">방위</string>
+    <string name="map_info_snr">SNR</string>
+    <string name="waterfall_title">워터폴</string>
+    <string name="waterfall_toggle_nr">NR</string>
+    <string name="waterfall_toggle_msg">MSG</string>
+    <string name="waterfall_status_live">LIVE</string>
+
+    <!-- ===== Settings: format helpers ===== -->
+    <string name="settings_minutes_format">%1$d min</string>
+    <string name="settings_tries_format">%1$d회</string>
+    <string name="settings_milliseconds_format">%1$d ms</string>
+    <string name="settings_hz_format">%1$d Hz</string>
+    <string name="settings_hz_str_format">%1$s Hz</string>
+    <string name="settings_percent_format">%1$d%%</string>
+    <string name="settings_bands_enabled_format">%2$d개 중 %1$d개 활성화</string>
+    <string name="settings_min_max_suffix">%1$d–%2$d %3$s</string>
+    <string name="settings_build_date_format">빌드 %1$s</string>
+    <string name="settings_version_value">v%1$s</string>
+
+    <!-- ===== Settings: sections ===== -->
+    <string name="settings_title">설정</string>
+    <string name="settings_section_operator_identity">운용자 정보</string>
+    <string name="settings_section_radio">무전기</string>
+    <string name="settings_section_audio">오디오</string>
+    <string name="settings_section_transmission">송신</string>
+    <string name="settings_section_auto_sequence">자동 시퀀스</string>
+    <string name="settings_section_decode_highlights">디코드 강조</string>
+    <string name="settings_section_callsign_blocklist">콜사인 차단 목록</string>
+    <string name="settings_section_decode_filters">디코드 필터</string>
+    <string name="settings_section_needed_dx_alerts">필요 DX 알림</string>
+    <string name="settings_section_logging_awards">로깅 &amp; 어워드</string>
+    <string name="settings_section_advanced">고급</string>
+    <string name="settings_section_about">정보</string>
+    <string name="settings_section_language">언어</string>
+
+    <!-- ===== Settings: drill-down category labels ===== -->
+    <string name="settings_cat_radio_audio">무전기 &amp; 오디오</string>
+    <string name="settings_cat_transmission">송신</string>
+    <string name="settings_cat_decode_filters">디코드 &amp; 필터</string>
+    <string name="settings_cat_logging">로깅 &amp; 어워드</string>
+    <string name="settings_cat_advanced">고급</string>
+    <string name="settings_cat_about">정보</string>
+    <string name="settings_cat_time_sync">시간 동기화</string>
+    <string name="settings_cat_time_sync_desc">오프라인 운용을 위한 수동 시계 보정</string>
+
+    <!-- ===== Settings: Time Sync (manual clock correction) ===== -->
+    <string name="settings_time_correction_section">수동 보정</string>
+    <string name="settings_time_current_label">현재 보정값</string>
+    <string name="settings_time_correction_reset">0으로 초기화</string>
+    <string name="settings_time_correction_desc">인터넷으로 동기화할 수 없을 때 앱 시계를 미세 조정합니다. FT8은 UTC를 약 1초 이내로 맞춰야 합니다. 디코드된 국의 DT 열이 0 근처에 모일 때까지 조정하세요.</string>
+    <string name="settings_time_suggest_section">디코드 기반 제안</string>
+    <string name="settings_time_suggest_none">아직 디코드 없음 — 수신을 시작하면 제안을 받을 수 있습니다.</string>
+    <string name="settings_time_suggest_label">최근 평균 DT: %1$s</string>
+    <string name="settings_time_suggest_apply">제안된 보정 적용</string>
+
+    <!-- ===== Settings: operator identity ===== -->
+    <string name="settings_auto_update_grid">그리드 자동 업데이트 (GPS)</string>
+    <string name="settings_auto_update_grid_desc">기기 GPS로 Maidenhead 그리드를 최신으로 유지</string>
+
+    <!-- ===== Settings: radio ===== -->
+    <string name="settings_rig_model">무전기 모델</string>
+    <string name="settings_control_mode">제어 모드</string>
+    <string name="settings_connection_mode">연결 모드</string>
+    <string name="settings_baud_rate">보드 레이트</string>
+    <string name="settings_band_frequency">밴드 &amp; 주파수</string>
+    <string name="settings_enabled_bands">활성화된 밴드</string>
+    <string name="settings_audio_frequency">오디오 주파수</string>
+    <string name="settings_spectrum_width">스펙트럼 폭</string>
+
+    <!-- ===== Settings: audio ===== -->
+    <string name="settings_audio_input">오디오 입력</string>
+    <string name="settings_audio_output">오디오 출력</string>
+    <string name="settings_tx_volume">TX 볼륨</string>
+    <string name="settings_tx_volume_desc" formatted="false">송신 오디오 레벨 (하드웨어 버튼 ±5%)</string>
+
+    <!-- ===== Settings: transmission ===== -->
+    <string name="settings_tx_rx_split">TX/RX 분리</string>
+    <string name="settings_tx_rx_split_desc">수신과 다른 주파수로 송신</string>
+    <string name="settings_tx_watchdog">TX 워치독</string>
+    <string name="settings_tx_watchdog_desc">시간 초과 후 송신 자동 중지</string>
+    <string name="settings_stop_after">중지 기준</string>
+    <string name="settings_stop_after_desc">N회 응답 없는 호출 후 중지</string>
+    <string name="settings_max_73">73 송신 최대 횟수</string>
+    <string name="settings_max_73_desc">다음으로 넘어가기 전 교신당 RR73/73 송신 최대 횟수</string>
+    <string name="settings_max_73_auto">자동</string>
+
+    <!-- ===== Settings: auto-sequence ===== -->
+    <string name="settings_hunt">Hunt (CQ 자동 응답)</string>
+    <string name="settings_hunt_desc">CQ를 호출하는 국을 능동적으로 호출합니다. TX 바의 HUNT 버튼과 동일합니다. 끔 = CQ 운용 및 응답하는 국만 처리.</string>
+    <string name="settings_auto_call_followed">팔로우 자동 호출</string>
+    <string name="settings_auto_call_followed_desc">팔로우한 콜사인을 자동으로 계속 호출</string>
+    <string name="settings_fast_turnaround">빠른 전환</string>
+    <string name="settings_fast_turnaround_desc">약 1초 일찍 디코드하여 기다리지 않고 다음 슬롯에 CQ에 응답할 수 있습니다. 시계 오차가 큰 국은 놓칠 수 있습니다.</string>
+    <string name="settings_auto_cq_after_qso">QSO 후 자동 CQ</string>
+    <string name="settings_auto_cq_after_qso_desc">각 교신 완료 후 자동으로 CQ를 계속 호출 — 다시 탭할 필요 없음. 당신의 주파수를 유지합니다(Hunt 무시). 중지하거나 응답 없이 TX 워치독이 시간 초과될 때까지 실행됩니다.</string>
+
+    <!-- ===== Settings: decode highlights ===== -->
+    <string name="settings_highlight_new_dxcc">신규 DXCC</string>
+    <string name="settings_highlight_new_dxcc_desc">미교신 DXCC 엔티티의 국 강조</string>
+    <string name="settings_highlight_new_grid">신규 그리드</string>
+    <string name="settings_highlight_new_grid_desc">아직 교신하지 않은 Maidenhead 그리드 강조</string>
+    <string name="settings_highlight_new_band">신규 밴드</string>
+    <string name="settings_highlight_new_band_desc">다른 밴드에서만 교신한 국 강조</string>
+    <string name="settings_highlight_pota">POTA 운용자</string>
+    <string name="settings_highlight_pota_desc">스폿된 POTA 운용자 강조; 신규 공원이 두드러짐</string>
+    <string name="settings_highlight_worked">이전 교신</string>
+    <string name="settings_highlight_worked_desc">이미 로그에 있는 국 표시</string>
+    <string name="settings_distance_unit">거리를 마일로</string>
+    <string name="settings_distance_unit_desc">거리를 킬로미터 대신 마일로 표시</string>
+
+    <!-- ===== Settings: callsign blocklist ===== -->
+    <string name="settings_exact_callsigns">정확한 콜사인</string>
+    <string name="settings_exact_callsigns_desc">전체 콜 일치 차단</string>
+    <string name="settings_prefixes">접두사</string>
+    <string name="settings_prefixes_desc">콜사인 접두사로 차단 (예: RA)</string>
+    <string name="settings_keywords">키워드</string>
+    <string name="settings_keywords_desc">콜이나 메시지의 부분 문자열로 차단 (예: POTA, /P)</string>
+
+    <!-- ===== Settings: decode filters ===== -->
+    <string name="settings_show_only_cq">CQ만 표시</string>
+    <string name="settings_show_only_cq_desc">CQ 유형 메시지를 제외한 모든 것 숨기기</string>
+    <string name="settings_dx_only">DX만</string>
+    <string name="settings_dx_only_desc">자신의 대륙 밖의 국만 표시</string>
+    <string name="settings_needed_only">필요한 것만</string>
+    <string name="settings_needed_only_desc">아직 확인되지 않은(QSL) 국만 표시</string>
+    <string name="settings_filter_by_continent">대륙별 필터</string>
+    <string name="settings_filter_by_continent_desc">선택한 대륙의 국만 표시</string>
+    <string name="settings_continent">대륙</string>
+    <string name="settings_skip_directional_cq">방향성 CQ 건너뛰기 (자동 응답)</string>
+    <string name="settings_skip_directional_cq_desc">다른 DXCC를 향한 CQ DX/EU/JA…에 자동 응답하지 않음</string>
+    <string name="settings_hide_directional_cq">나를 향하지 않은 방향성 CQ 숨기기</string>
+    <string name="settings_hide_directional_cq_desc">당신의 DXCC를 향하지 않는 지역 지정 CQ 숨기기</string>
+
+    <!-- ===== Settings: needed-DX alerts ===== -->
+    <string name="settings_alert_new_dxcc">신규 DXCC</string>
+    <string name="settings_alert_new_dxcc_desc">미교신 DXCC 엔티티가 CQ를 호출하면 소리 + 진동 + 알림</string>
+    <string name="settings_alert_new_state">신규 미국 주</string>
+    <string name="settings_alert_new_state_desc">미교신 미국 주의 국이 CQ를 호출하면 소리 + 진동 + 알림 (그리드로 주 판별)</string>
+
+    <!-- ===== Settings: logging &amp; awards ===== -->
+    <string name="settings_save_swl_decodes">SWL 디코드 저장</string>
+    <string name="settings_save_swl_decodes_desc">디코드된 모든 메시지를 데이터베이스에 기록</string>
+    <string name="settings_save_swl_qsos">SWL QSO 저장</string>
+    <string name="settings_save_swl_qsos_desc">다른 국 간에 감지된 QSO 기록</string>
+    <string name="settings_pskreporter">PSKReporter</string>
+    <string name="settings_pskreporter_desc">디코드된 스폿을 pskreporter.info에 업로드</string>
+    <string name="settings_qrz_com">QRZ.com</string>
+    <string name="settings_qrz_com_desc">QSO를 QRZ 로그북에 자동 업로드</string>
+    <string name="settings_qrz_profile_lookup">QRZ 프로필 조회</string>
+    <string name="settings_qrz_profile_lookup_desc">QRZ XML API용 사용자 이름 + 비밀번호 (아바타)</string>
+    <string name="settings_cloudlog">Cloudlog / Wavelog / Nextlog</string>
+    <string name="settings_cloudlog_desc">QSO를 Cloudlog, Wavelog 또는 Nextlog 인스턴스에 자동 업로드</string>
+
+    <!-- ===== Settings: advanced ===== -->
+    <string name="settings_ptt_delay">PTT 지연</string>
+    <string name="settings_ptt_delay_desc">PTT 후 송신 오디오 시작 전 지연</string>
+    <string name="settings_tx_delay">TX 지연</string>
+    <string name="settings_tx_delay_desc">이전 주기 디코드를 위해 송신 전 지연</string>
+    <string name="settings_late_start_tolerance">늦은 시작 허용치</string>
+    <string name="settings_late_start_tolerance_desc">주기 시작 후 최대 N ms까지 TX 시작 허용; TX가 주기 경계에서 끝나도록 앞부분 오디오를 잘라냄</string>
+
+    <!-- ===== Settings: about ===== -->
+    <string name="settings_faq_support">FAQ &amp; 지원</string>
+    <string name="settings_report_bug">버그 신고</string>
+    <string name="bug_report_description_hint">무엇이 잘못되었는지 설명하세요…</string>
+    <string name="bug_report_send_email">이메일 보내기</string>
+    <string name="bug_report_no_email_app">신고를 보낼 이메일 앱을 찾을 수 없습니다</string>
+    <string name="bug_report_open_github">GitHub 이슈 열기</string>
+    <string name="settings_debug_desc">debug.log 보기 / 공유</string>
+    <string name="settings_share_logs">로그 공유</string>
+    <string name="settings_share_logs_desc">debug.log를 이메일, Discord, Drive 등으로 보내기</string>
+    <string name="settings_view_logs">로그 보기</string>
+    <string name="settings_share_logs_empty">아직 기록된 로그가 없습니다</string>
+    <string name="settings_about_body">버전 %1$s (빌드 %2$s)\n빌드 날짜 %3$s\n\nFT8, 쉽게.\n\nAndroid용 독립형 FT8 트랜시버 앱. USB, Bluetooth, 네트워크 무전기 제어와 자동 시퀀싱 및 로깅 지원.</string>
+    <string name="settings_website">웹사이트</string>
+    <string name="settings_community">커뮤니티</string>
+    <string name="settings_built_by">제작</string>
+
+    <!-- ===== Settings: dialogs ===== -->
+    <string name="settings_block_exact_title">정확한 콜사인 차단</string>
+    <string name="settings_block_exact_desc">전체 콜 일치. 쉼표 또는 공백으로 구분, 예: W1AW, K1ABC.</string>
+    <string name="settings_block_prefix_title">콜사인 접두사 차단</string>
+    <string name="settings_block_prefix_desc">접두사 일치, 예: RA는 RA0AA..RA9ZZ를 차단. 쉼표 또는 공백으로 구분.</string>
+    <string name="settings_block_keyword_title">키워드 차단</string>
+    <string name="settings_block_keyword_desc">콜과 메시지 텍스트의 부분 문자열 일치, 예: POTA, /P, QRP.</string>
+    <string name="settings_blocklist_hint">예: W1AW, RA, /P</string>
+    <string name="settings_filter_continent_title">대륙 필터</string>
+    <string name="settings_conn_usb_cable">USB 케이블</string>
+    <string name="settings_conn_bluetooth">Bluetooth</string>
+    <string name="settings_conn_network">네트워크</string>
+    <string name="settings_no_usb_serial">USB 시리얼 장치가 감지되지 않았습니다. 무전기에 USB 케이블을 연결하고 다시 시도하세요.</string>
+    <string name="settings_no_bluetooth_devices">연결된 Bluetooth 장치를 찾을 수 없습니다. 먼저 Android Bluetooth 설정에서 장치를 페어링하세요.</string>
+    <string name="settings_edit_operator_identity">운용자 정보 편집</string>
+    <string name="settings_callsign">콜사인</string>
+    <string name="settings_callsign_hint">예: W1AW</string>
+    <string name="settings_grid_locator">그리드 로케이터</string>
+    <string name="settings_grid_locator_hint">예: FN31pr</string>
+    <string name="settings_logging_server">로깅 서버</string>
+    <string name="settings_logging_server_desc">Cloudlog, Wavelog, Nextlog는 모두 동일한 업로드를 받습니다.</string>
+    <string name="settings_server_address">서버 주소</string>
+    <string name="settings_api_key">API 키</string>
+    <string name="settings_api_key_hint">당신의 Cloudlog API 키</string>
+    <string name="settings_loading_stations">스테이션 로드 중...</string>
+    <string name="settings_station_id">스테이션 ID</string>
+    <string name="settings_station_id_hint">예: 1</string>
+    <string name="settings_select_a_station">스테이션 선택</string>
+    <string name="settings_enter_manually">직접 입력</string>
+    <string name="settings_choose_from_server">서버에서 선택</string>
+    <string name="settings_station_profile">스테이션 프로필</string>
+    <string name="settings_qrz_creds_desc">QRZ XML API를 통해 디코드된 콜사인의 프로필 사진을 가져오는 데 사용됩니다. QRZ XML 구독이 필요합니다.</string>
+    <string name="settings_username">사용자 이름</string>
+    <string name="settings_username_hint">당신의 QRZ.com 사용자 이름</string>
+    <string name="settings_password">비밀번호</string>
+    <string name="settings_enabled_bands_dialog_desc">숨겨진 밴드는 주파수 선택기에 나타나지 않습니다.</string>
+    <string name="settings_select_serial_port">시리얼 포트 선택</string>
+    <string name="settings_tx_volume_advice">실시간으로 조정하세요 — 다음 TX가 이 레벨을 사용합니다. 무전기의 ALC를 지켜보며 선에 살짝 닿을 때까지 낮추세요.</string>
+    <string name="settings_input_volume">입력 볼륨</string>
+    <string name="settings_input_volume_desc" formatted="false">디코딩 전에 적용되는 수신 오디오 게인 (100% = 변경 없음)</string>
+    <string name="settings_input_volume_advice">디코딩 전에 수신 오디오에 적용됩니다. 워터폴의 RX 레벨 미터를 보면서 녹색 구간을 목표로 하세요. 빨간색은 클리핑을 의미합니다.</string>
+    <string name="input_level_too_low">낮음</string>
+    <string name="input_level_good">적정</string>
+    <string name="input_level_too_high">높음</string>
+    <string name="input_level_clipping">클립</string>
+
+    <!-- ===== Settings: language picker ===== -->
+    <string name="settings_language">언어</string>
+    <string name="settings_language_desc">앱 표시 언어</string>
+    <string name="settings_language_system">시스템 기본값</string>
+
+    <!-- Untranslated — added for parity; translate when localization pass runs -->
+    <string name="settings_show_volume_slider">Show Volume Slider</string>
+    <string name="settings_show_volume_slider_desc">Display TX volume slider on main screen</string>
+    <string name="settings_hunt_cq">Hunt + CQ</string>
+    <string name="settings_hunt_cq_desc">Call CQ when Hunt is idle (no stations heard). When a CQ is detected, automatically stop CQ and answer it.</string>
+    <string name="tx_volume_decrease">Decrease TX volume</string>
+    <string name="tx_volume_increase">Increase TX volume</string>
+    <string name="tx_audio_dropped">TX 오디오 실패 — 이번 주기에 신호가 송신되지 않았습니다 (USB 오디오 오류)</string>
+    <string name="cq_offset_moved">CQ 오프셋을 빈 자리로 이동: %1$d Hz</string>
+    <string name="settings_auto_clear_tx">빈 TX 오프셋 자동 선택</string>
+    <string name="settings_auto_clear_tx_desc">CQ 호출 시 최근 밴드 활동을 바탕으로 빈 자리를 선택하고, 점유되면 이동합니다</string>
+    <string name="tune_content_description">Tune: 무전기 튜너를 시작하거나 안테나 조정용 연속 반송파를 송신합니다</string>
+    <string name="tune_stopped_timeout">Tune이 %1$d초 후 정지되었습니다</string>
+    <string name="tune_blocked_tx">Tune 전에 CQ/QSO를 정지하세요</string>
+    <string name="tune_unavailable_route">이 오디오 경로에서는 아직 Tune을 사용할 수 없습니다</string>
+    <string name="tune_atu_started">무전기 안테나 튜너 시작됨</string>
+    <string name="tune_atu_unavailable">튜너를 사용할 수 없습니다 — 내장 튜너가 있는 CAT 무전기를 연결하세요</string>
+    <string name="settings_tune_method">Tune 방식</string>
+    <string name="settings_tune_method_desc">자동은 가능할 때 CAT으로 무전기 내장 튜너를 시작하고, 아니면 저출력 톤을 송신합니다</string>
+    <string name="tune_method_automatic">자동</string>
+    <string name="tune_method_internal">내장 튜너</string>
+    <string name="tune_method_tone">저출력 톤</string>
+
+    <!-- ===== Settings: FFT / waterfall developer knobs (issue #428) ===== -->
+    <string name="settings_section_fft_waterfall">FFT / 워터폴 (개발자)</string>
+    <string name="settings_fft_window">FFT 창 함수</string>
+    <string name="settings_fft_window_desc">스펙트럼/워터폴 표시용 FFT 전 창 함수. Hann은 스펙트럼 누설을 줄입니다</string>
+    <string name="settings_fft_window_rect">직사각형(없음)</string>
+    <string name="settings_fft_window_hann">Hann</string>
+    <string name="settings_fft_window_hamming">Hamming</string>
+    <string name="settings_fft_window_blackman">Blackman</string>
+    <string name="settings_fft_window_blackman_harris">Blackman-Harris</string>
+    <string name="settings_fft_averaging">프레임 평균</string>
+    <string name="settings_fft_averaging_desc">FFT 프레임 간 표시를 부드럽게 합니다. 끄면 각 프레임을 그대로 표시합니다</string>
+    <string name="settings_fft_avg_off">끄기</string>
+    <string name="settings_fft_avg_light">약하게 (EMA 0.5)</string>
+    <string name="settings_fft_avg_heavy">강하게 (EMA 0.25)</string>
+    <string name="settings_bin_agg">스펙트럼 빈 결합</string>
+    <string name="settings_bin_agg_desc">인접한 FFT 빈을 하나의 막대로 결합하는 방법</string>
+    <string name="settings_bin_agg_max">최대</string>
+    <string name="settings_bin_agg_avg">평균</string>
+    <string name="settings_bin_agg_rms">RMS</string>
+
+    <!-- World Radio League (issue #800) -->
+    <string name="log_sync_wrl_accepted">World Radio League: %1$d개 수락됨</string>
+    <string name="settings_wrl_desc">QSO를 World Radio League 로그북에 자동 업로드 (Developer API 키 필요)</string>
+    <string name="settings_wrl_dialog_desc">World Radio League의 Integrations → Developer API에서 키를 생성하세요. 키 하나로 계정 전체에 사용됩니다.</string>
+    <string name="settings_wrl_logbook">로그북</string>
+    <string name="settings_wrl_logbook_default">기본 로그북</string>
+    <string name="settings_wrl_loading_logbooks">로그북 불러오는 중…</string>
+    <string name="settings_wrl_no_logbooks">World Radio League 계정에 아직 로그북이 없습니다.</string>
+    <string name="settings_wrl_create_logbook">“%1$s” 로그북 만들기</string>
+    <string name="settings_wrl_creating_logbook">로그북 만드는 중…</string>
+    <string name="common_configured">설정됨</string>
+    <string name="status_new_zone">새로운 영역</string>
+    <string name="status_new_state">새로운 주</string>
+    <string name="status_new_prefix">새로운 접두사</string>
+    <string name="tx_cq_options">CQ 메시지 옵션 (수정기, 자유 텍스트, 필드 데이)</string>
+    <string name="sheet_close">닫기</string>
+    <string name="tx_hunt_options">헌트 옵션 (우선순위, 스마트 필터)</string>
+    <string name="tx_status_listening">수신 중</string>
+    <string name="tx_status_transmitting">송신 중</string>
+    <string name="tx_status_tuning">조정 중</string>
+    <string name="tx_next_window">다음 송신 창</string>
+    <string name="tx_call_cq_subtitle">연락 시도 시작</string>
+    <string name="tx_more">더 보기</string>
+    <string name="tx_band_mode_label">주파수대 &amp;모드</string>
+    <string name="tx_period_label">송신 주기</string>
+    <string name="tx_period_first">첫 번째 (짝수)</string>
+    <string name="tx_period_second">두 번째 (홀수)</string>
+    <string name="tx_dx">DX</string>
+    <string name="tx_hunt_off">꺼짐</string>
+    <string name="band_sheet_title">주파수대 &amp;모드</string>
+    <string name="band_sheet_subtitle">밴드를 선택하면 라디오가 재조정됩니다</string>
+    <string name="band_sheet_all_bands">모든 밴드&amp;사용자 지정 주파수</string>
+    <string name="band_hint_20m_best">현재 최고 · 낮 시간, 전 세계</string>
+    <string name="band_hint_20m">낮 시간, 전 세계</string>
+    <string name="band_hint_40m">저녁 및 밤</string>
+    <string name="band_hint_17m">조용한 낮 시간 밴드</string>
+    <string name="band_hint_15m">태양이 활발할 때 좋음</string>
+    <string name="band_hint_10m">개방 시 장거리</string>
+    <string name="band_hint_80m">지역, 저녁</string>
+    <string name="cat_status_linked">라디오 연결됨</string>
+    <string name="cat_status_not_linked">라디오 연결되지 않음</string>
+    <string name="hunt_priority_title">HUNT 우선순위</string>
+    <string name="hunt_priority_latest">최신</string>
+    <string name="hunt_priority_strongest">가장 강한</string>
+    <string name="hunt_priority_weakest">가장 약한</string>
+    <string name="hunt_priority_farthest">가장 먼</string>
+    <string name="hunt_priority_pota">POTA/SOTA</string>
+    <string name="hunt_priority_new_dxcc">새 DXCC</string>
+    <string name="hunt_priority_new_grid">새 그리드</string>
+    <string name="hunt_priority_desc_latest">가장 최근에 디코딩된 CQ에 응답 (기본 동작)</string>
+    <string name="hunt_priority_desc_strongest">가장 큰 소리의 CQ에 먼저 응답 — 완료 가능성이 가장 높음</string>
+    <string name="hunt_priority_desc_weakest">가장 약한 CQ에 먼저 응답 — QRP 및 챌린지 헌팅</string>
+    <string name="hunt_priority_desc_farthest">가장 먼 CQ에 먼저 응답 — DX 추적</string>
+    <string name="hunt_priority_desc_pota">공원/산 정상 활동자에게 먼저 응답 — 아직 추적하지 않은 공원이 우선 순위</string>
+    <string name="hunt_priority_desc_new_dxcc">아직 교신하지 않은 DXCC 엔티티의 CQ에 먼저 응답</string>
+    <string name="hunt_priority_desc_new_grid">아직 교신하지 않은 그리드 스퀘어의 CQ에 먼저 응답</string>
+    <string name="hunt_filters_title">스마트 필터</string>
+    <string name="hunt_avoid_pileups">파일업 회피</string>
+    <string name="hunt_avoid_pileups_desc">이번 사이클에 다른 사람이 응답하지 않은 CQ 선호</string>
+    <string name="hunt_min_snr">최소 신호</string>
+    <string name="hunt_min_snr_desc">이것보다 약한 CQ는 건너뜀 — 성사되지 않는 QSO 수 감소</string>
+    <string name="hunt_min_snr_off">끄기</string>
+    <string name="hunt_footer_note">Hunt는 이미 교신한 스테이션과 제외한 접두사를 항상 건너뜀.</string>
+    <string name="hunt_start">Hunt 시작</string>
+    <string name="hunt_done">완료</string>
+    <string name="cq_directed_too_long">CQ + 텍스트 + 호출 부호가 하나의 FT8 메시지에 맞지 않음 (최대 13자, 제한된 문자셋)</string>
+    <string name="cq_saved_label">저장됨</string>
+    <string name="cq_saved_remove">저장된 CQ 제거</string>
+    <string name="decode_sort_label_last_heard">시간</string>
+    <string name="decode_sort_label_callsign">호출 부호</string>
+    <string name="decode_sort_label_snr">신호대잡음비(SNR)</string>
+    <string name="decode_sort_label_distance">DX</string>
+    <string name="decode_sort_cd_last_heard">정렬: 마지막으로 들은 순</string>
+    <string name="decode_sort_cd_callsign">정렬: 호출부호 순</string>
+    <string name="decode_sort_cd_snr">정렬: 신호대잡음비 순</string>
+    <string name="decode_sort_cd_distance">정렬: 거리 순, 가장 먼 순</string>
+    <string name="decode_filter_new_zone">새 지역</string>
+    <string name="decode_filter_new_state">새 주</string>
+    <string name="decode_filter_new_grid">새 격자</string>
+    <string name="decode_filter_new_prefix">새 접두사</string>
+    <string name="decode_empty_zone_title">새로운 존 없음</string>
+    <string name="decode_empty_zone_body">아직 작동되지 않은 CQ 존에서 호출하는 스테이션이 디코딩되지 않았습니다.</string>
+    <string name="decode_empty_state_title">새로운 주 없음</string>
+    <string name="decode_empty_state_body">아직 작동되지 않은 미국 주에서 호출하는 스테이션이 디코딩되지 않았습니다.</string>
+    <string name="decode_empty_grid_title">새로운 격자 없음</string>
+    <string name="decode_empty_grid_body">아직 작동되지 않은 격자 사각형에서 호출하는 스테이션이 디코딩되지 않았습니다.</string>
+    <string name="decode_empty_prefix_title">새로운 접두사 없음</string>
+    <string name="decode_empty_prefix_body">아직 작동되지 않은 콜사인 접두사(WPX)에서 호출하는 스테이션이 디코딩되지 않았습니다.</string>
+    <string name="qso_stat_azimuth_long_path">LP %1$s</string>
+    <string name="qso_worked_before_title">이전에 작동함</string>
+    <string name="qso_worked_before_last">last %1$s</string>
+    <string name="qso_worked_before_bands">Bands: %1$s</string>
+    <string name="qso_last_heard">마지막으로 들음</string>
+    <string name="qso_last_heard_unknown">--</string>
+    <string name="qso_last_heard_just_now">방금</string>
+    <string name="qso_last_heard_seconds">%1$ds ago</string>
+    <string name="qso_last_heard_minutes">%1$dm ago</string>
+    <string name="qso_last_heard_hours">%1$dh ago</string>
+    <string name="qso_last_heard_days">%1$dd ago</string>
+    <string name="qso_grayline_label">회색 선</string>
+    <string name="qso_grayline_now">지금 회색 선 위에</string>
+    <string name="qso_grayline_daylight">일광</string>
+    <string name="qso_grayline_night">밤</string>
+    <string name="qso_grayline_sunrise_in">sunrise in %1$s</string>
+    <string name="qso_grayline_sunset_in">sunset in %1$s</string>
+    <string name="qso_grayline_sunrise_now">일출 시</string>
+    <string name="qso_grayline_sunset_now">일몰 시</string>
+    <string name="qso_grayline_midnight_sun">백야</string>
+    <string name="qso_grayline_polar_night">극야</string>
+    <string name="log_award_was_states">모든 주에서 근무함</string>
+    <string name="log_award_states_needed">필요한 주</string>
+    <string name="log_section_best_dx">최고 DX</string>
+    <string name="log_section_wac">모든 대륙에서 교신 완료</string>
+    <string name="log_wac_progress">%1$d / %2$d continents</string>
+    <string name="log_wac_complete">모든 6개 대륙에서 교신 완료 🌍</string>
+    <string name="log_wac_continent_worked">%1$s worked</string>
+    <string name="log_wac_continent_needed">%1$s not yet worked</string>
+    <string name="log_search_hint">호출부호, 그리드, 밴드 검색…</string>
+    <string name="log_search_clear">검색 지우기</string>
+    <string name="log_search_no_results_title">일치하는 QSO 없음</string>
+    <string name="log_search_no_results_body">Nothing in your log matches “%1$s”</string>
+    <string name="log_award_wac">WAC</string>
+    <string name="log_award_wac_desc">모든 대륙 작업 -- 여섯 대륙 모두 연락</string>
+    <string name="log_cd_import_qsos">ADIF 로그 가져오기</string>
+    <string name="log_import_title_importing">ADIF 로그 가져오는 중…</string>
+    <string name="log_import_title_complete">가져오기 완료</string>
+    <string name="log_import_title_failed">가져오기 실패</string>
+    <string name="log_import_progress_count">%1$d of %2$d records</string>
+    <string name="log_import_added">Added: %1$d new QSOs</string>
+    <string name="log_import_updated">Updated: %1$d existing QSOs</string>
+    <string name="log_import_invalid">Skipped: %1$d invalid records</string>
+    <string name="log_import_none_found">선택한 파일에서 ADIF 기록을 찾을 수 없습니다. WSJT-X 또는 다른 로그 애플리케이션에서 내보낸 .adi 로그 파일을 선택하세요.</string>
+    <string name="log_import_open_failed">선택한 파일을 열 수 없습니다.</string>
+    <string name="pota_search_parks">공원 검색</string>
+    <string name="pota_search_parks_hint">이름 또는 참조로 필터링</string>
+    <string name="pota_recent_parks">최근 공원</string>
+    <string name="pota_nearby_parks">근처 공원</string>
+    <string name="pota_no_recent_parks">최근 활성화 없음</string>
+    <string name="pota_no_nearby_parks">근처에 공원이 없습니다</string>
+    <string name="pota_loading_nearby">근처 공원 로딩 중…</string>
+    <string name="pota_loading_recent">최근 공원 로드 중…</string>
+    <string name="pota_location_unavailable">위치 사용 불가 — GPS 활성화 필요</string>
+    <string name="map_overlay_grayline">회색</string>
+    <string name="map_overlay_grayline_cd">회색선(주야 경계선) 오버레이</string>
+    <string name="map_filter">필터</string>
+    <string name="map_filter_title">PSK 필터</string>
+    <string name="map_filter_done">완료</string>
+    <string name="map_filter_time">시간</string>
+    <string name="map_filter_band">대역</string>
+    <string name="map_filter_mode">모드</string>
+    <string name="map_filter_direction">방향</string>
+    <string name="map_filter_all">모든</string>
+    <string name="map_reach_title">당신의 신호가 도달하는</string>
+    <string name="map_reach_furthest">Furthest · %1$s</string>
+    <string name="map_reach_best">Best · %1$s</string>
+    <string name="map_header_subtitle">%1$d decoded · %2$d worked this session</string>
+    <string name="map_layer_decodes">디코드</string>
+    <string name="map_layer_psk">PSK 스팟</string>
+    <string name="map_layer_worked">작동함</string>
+    <string name="map_ctrl_me">나</string>
+    <string name="map_ctrl_me_cd">내 위치로 다시 중심 맞추기</string>
+    <string name="map_greyline_in">%1$s · greyline in %2$s</string>
+    <string name="map_details">세부정보</string>
+    <string name="map_option_projection">투영</string>
+    <string name="map_option_grayline">회색선</string>
+    <string name="map_menu_cd">지도 옵션</string>
+    <string name="settings_section_appearance">모양</string>
+    <string name="settings_section_backup">백업 &amp; 복원</string>
+    <string name="settings_export">설정 내보내기</string>
+    <string name="settings_export_desc">모든 설정을 백업 파일에 저장</string>
+    <string name="settings_import">설정 가져오기</string>
+    <string name="settings_import_desc">백업 파일에서 설정 복원</string>
+    <string name="settings_export_dialog_title">설정 내보내기</string>
+    <string name="settings_backup_include_sensitive">민감한 데이터 포함</string>
+    <string name="settings_backup_include_sensitive_desc">API 키 및 비밀번호 (Cloudlog, QRZ, 리그 로그인)</string>
+    <string name="action_export">내보내기</string>
+    <string name="action_import">가져오기</string>
+    <string name="settings_import_confirm_title">설정을 가져오시겠습니까?</string>
+    <string name="settings_import_confirm_msg">This will overwrite %1$d setting(s) with values from the backup created %2$s.</string>
+    <string name="settings_export_success">설정 내보내기 완료</string>
+    <string name="settings_export_failed">Export failed: %1$s</string>
+    <string name="settings_import_success">설정 가져오기 완료 — 모든 변경 사항을 적용하려면 앱을 재시작하세요</string>
+    <string name="settings_import_failed">Import failed: %1$s</string>
+    <string name="settings_section_diagnostics">진단</string>
+    <string name="settings_crash_reporting">크래시 보고서 전송</string>
+    <string name="settings_crash_reporting_desc">익명 크래시 및 오류 보고서를 공유하여 버그 수정에 도움을 주십시오. 귀하의 콜사인과 위치는 절대 전송되지 않습니다.</string>
+    <string name="settings_theme">테마</string>
+    <string name="settings_theme_desc">앱 색상 테마</string>
+    <string name="theme_name_dark">다크</string>
+    <string name="theme_name_light">라이트</string>
+    <string name="settings_cat_usb_diagnostics">USB 진단</string>
+    <string name="settings_cat_usb_diagnostics_desc">USB 장치 검색 및 CAT 통신 확인</string>
+    <string name="usb_diag_title">USB 진단</string>
+    <string name="usb_diag_desc">USB 장치 검색 및 CAT 통신의 실시간 상태. 리그 연결이 실패하는 위치를 정확히 찾는 데 사용하세요.</string>
+    <string name="usb_diag_device_found">장치 발견됨</string>
+    <string name="usb_diag_vendor_id">벤더 ID</string>
+    <string name="usb_diag_product_id">제품 ID</string>
+    <string name="usb_diag_permission">USB 권한</string>
+    <string name="usb_diag_cdc_serial">CDC 시리얼 발견됨</string>
+    <string name="usb_diag_audio_device">오디오 장치 발견됨</string>
+    <string name="usb_diag_port_open">포트 열림</string>
+    <string name="usb_diag_cat_response">CAT 응답</string>
+    <string name="usb_diag_cat_port">CAT 포트</string>
+    <string name="usb_diag_baud_value">%1$s · %2$d bd</string>
+    <string name="usb_diag_hint_ft710">FT-710 케이블 모드는 쓰기 전용입니다: 앱은 CAT 포트에서 데이터를 읽지 않으므로 CAT 응답은 실패가 아닌 정보로 표시됩니다.</string>
+    <string name="usb_diag_hint_dual_port">이 칩에는 두 개의 포트가 있습니다. Yaesu 장비(FT-891, FT-991A, FTDX10, FT-710)는 향상된 포트에서 CAT에 응답하며; Kenwood TS-890S/TS-990S는 표준 포트에서 응답합니다. 다른 포트는 RTS/DTR 키잉만 전달합니다. 연결 모드 › USB 케이블에서 다른 포트를 선택하고, 장비 메뉴와 비교하여 전송 속도를 확인하십시오.</string>
+    <string name="usb_diag_hint_no_response">포트는 열려 있지만 라디오는 응답하지 않았습니다. 전송 속도와 설정의 라디오 모델, 장비 메뉴에서 CAT이 활성화되어 있는지 확인하십시오.</string>
+    <string name="usb_diag_value_none">—</string>
+    <string name="usb_diag_status_pass">통과</string>
+    <string name="usb_diag_status_fail">실패</string>
+    <string name="settings_time_suggest_auto">자동 동기화가 켜져 있음 — 디코드에서의 수정이 자동으로 적용됩니다, 탭이 필요 없습니다.</string>
+    <string name="settings_time_suggest_auto_waiting">첫 자동 수정 전에 동의된 디코드를 기다리는 중…</string>
+    <string name="settings_time_suggest_auto_last">Last auto-correction: %1$s at %2$s</string>
+    <string name="settings_time_correction_gps_locked">GPS 시계 조정이 시계를 제어하고 있습니다 — 수동으로 조정하려면 아래에서 끄세요.</string>
+    <string name="settings_time_correction_ntp_locked">NTP 시계 조정이 시계를 제어하고 있습니다 — 수동으로 조정하려면 아래에서 끄세요.</string>
+    <string name="settings_selfsync_section">자동 동기화 시계</string>
+    <string name="settings_selfsync_toggle">디코드에서 시계를 자동 동기화</string>
+    <string name="settings_selfsync_toggle_desc">기본적으로 켜져 있음. 들리는 방송국에 맞춰 시계를 고정시킵니다 — 밴드 자체가 시간 소스이며, 인터넷이나 GPS가 필요 없습니다. 분명히 틀어진 시계는 첫 번째 바쁜 슬롯에서 수정되며, 작은 드리프트는 부드럽게 조정됩니다. GPS 또는 NTP 시계 조정이 켜져 있는 동안에는 사용할 수 없습니다.</string>
+    <string name="settings_gps_clock_section">GPS 시계 조정</string>
+    <string name="settings_gps_clock_toggle">GPS로 시계를 조정</string>
+    <string name="settings_gps_clock_toggle_desc">위성 시간을 사용하여 FT8 주기를 실제 UTC에 맞춥니다. 켜져 있는 동안 수동 보정을 무시합니다. 위치 권한과 GPS 수신이 필요합니다.</string>
+    <string name="settings_gps_clock_interval">업데이트 간격</string>
+    <string name="settings_gps_clock_interval_value">%1$d min</string>
+    <string name="settings_gps_clock_waiting">GPS 수신을 기다리는 중…</string>
+    <string name="settings_gps_clock_last_sync">Last GPS sync: %1$s UTC</string>
+    <string name="settings_gps_clock_offset">Applied offset: %1$s</string>
+    <string name="settings_ntp_clock_section">NTP 시계 보정</string>
+    <string name="settings_ntp_clock_toggle">NTP에서 시계 보정</string>
+    <string name="settings_ntp_clock_toggle_desc">FT8 주기를 실제 UTC에 맞추기 위해 주기적으로 네트워크 시간 서버와 동기화합니다. 켜져 있는 동안 수동 보정을 무시합니다. 인터넷 접근이 필요합니다.</string>
+    <string name="settings_ntp_clock_server_label">NTP 서버</string>
+    <string name="settings_ntp_clock_server_hint">예: pool.ntp.org</string>
+    <string name="settings_ntp_clock_waiting">첫 번째 NTP 동기화 대기 중…</string>
+    <string name="settings_ntp_clock_last_sync">Last NTP sync: %1$s UTC</string>
+    <string name="settings_ntp_clock_offset">Applied offset: %1$s</string>
+    <string name="settings_ntp_clock_sync_failed">마지막 동기화 시도 실패 — 재시도 중…</string>
+    <string name="settings_controls_drawer">컨트롤 서랍</string>
+    <string name="settings_controls_drawer_desc">작동 컨트롤을 아래쪽 시트로 축소하여 위로 당겨 사용합니다. 꺼짐은 항상 전체 컨트롤 스트립을 표시합니다.</string>
+    <string name="controls_drawer_expand">컨트롤 확장</string>
+    <string name="controls_drawer_collapse">컨트롤 축소</string>
+    <string name="controls_drawer_more">더 많은 컨트롤</string>
+    <string name="settings_per_band_volume">밴드별 출력 레벨 저장</string>
+    <string name="settings_per_band_volume_desc">밴드마다 TX 볼륨을 별도로 기억하고 밴드 변경 시 복원</string>
+    <string name="per_band_volume_restored">TX volume %1$d%% restored for %2$s</string>
+    <string name="settings_hold_tx_freq">TX 주파수 유지</string>
+    <string name="settings_hold_tx_freq_desc">상대국에 응답할 때 TX 오프셋을 이동하지 않고 유지</string>
+    <string name="settings_clear_on_change">밴드/모드 변경 시 디코드 지우기</string>
+    <string name="settings_clear_on_change_desc">밴드 또는 모드를 변경하면 디코드 목록을 지우고 TX 목표를 CQ로 재설정</string>
+    <string name="settings_pileup_strongest">가장 강한 호출자 우선 작업</string>
+    <string name="settings_pileup_strongest_desc">여러 호출자가 있을 때, 가장 먼저 호출한 사람이 아니라 가장 강한 대기 호출자를 자동으로 작업. 바쁜 통신 중 최상의 수신 품질의 연락을 먼저 완료. 호출자 큐는 강한 순서대로 나열됨.</string>
+    <string name="settings_highlight_new_zone">새 구역</string>
+    <string name="settings_highlight_new_zone_desc">아직 작업하지 않은 CQ 지역 강조 (모든 지역 작업 완료)</string>
+    <string name="settings_highlight_new_state">새로운 주</string>
+    <string name="settings_highlight_new_state_desc">아직 작업하지 않은 미국 주 강조 (모든 주 작업 완료)</string>
+    <string name="settings_highlight_new_prefix">새로운 접두사</string>
+    <string name="settings_highlight_new_prefix_desc">아직 작업하지 않은 콜사인 접두사 강조 (모든 접두사 작업 완료 / WPX)</string>
+    <string name="settings_worked_mode">동작</string>
+    <string name="settings_worked_mode_desc">작업한 스테이션에 대해 수행할 작업</string>
+    <string name="settings_worked_mode_highlight">강조</string>
+    <string name="settings_worked_mode_ignore">무시</string>
+    <string name="settings_worked_mode_hide">숨기기</string>
+    <string name="settings_worked_scope">일치 기준</string>
+    <string name="settings_worked_scope_desc">어떤 국이 작업된 것으로 간주되는지</string>
+    <string name="settings_worked_scope_on_band">이 대역에서 작업함</string>
+    <string name="settings_worked_scope_before">이전에 작업함 (모든 대역)</string>
+    <string name="settings_worked_scope_today">오늘 또는 어제 작업함</string>
+    <string name="settings_worked_scope_from_list">작업 목록에 있음</string>
+    <string name="settings_worked_list_title">작업 목록</string>
+    <string name="settings_worked_list_desc">작업한 것으로 간주할 콜사인 (쉼표로 구분)</string>
+    <string name="settings_worked_same_mode">같은 모드만</string>
+    <string name="settings_worked_same_mode_desc">현재 모드에서 이루어진 QSO만 계산</string>
+    <string name="settings_show_beam_heading">빔 헤딩 표시</string>
+    <string name="settings_show_beam_heading_desc">방향성 안테나를 조준하기 위해 각 디코드 행에 대원거리 방위 추가</string>
+    <string name="settings_alert_cq_reply">CQ 응답</string>
+    <string name="settings_alert_cq_reply_desc">스테이션이 호출할 때(당신의 콜사인으로 된 메시지) 소리 + 진동 + 알림</string>
+    <string name="settings_alert_qso_complete">QSO 완료</string>
+    <string name="settings_alert_qso_complete_desc">QSO가 기록될 때 소리 + 진동 + 알림</string>
+    <string name="alert_cq_reply_title">Calling you: %1$s</string>
+    <string name="alert_qso_complete_title">QSO 완료</string>
+    <string name="settings_alert_watchlist">콜사인 감시 목록</string>
+    <string name="settings_alert_watchlist_desc">감시 중인 콜사인이나 접두사가 디코드되는 순간, 모든 밴드에서 소리 + 진동 + 알림</string>
+    <string name="settings_watch_dialog_title">콜사인 감시 목록</string>
+    <string name="settings_watch_dialog_desc">쉼표로 구분된 콜사인 또는 접두사(예: 3Y0, W1AW, TX7). 일치가 디코딩되면 즉시 알림이 발생합니다 — 접두사로 일치하므로 DXpedition 접두사는 모든 변형을 포착합니다.</string>
+    <string name="alert_watch_title">Watchlist: %1$s</string>
+    <string name="settings_cat_voice">음성 보조</string>
+    <string name="settings_cat_voice_desc">음성 발표 및 핸즈프리 음성 명령</string>
+    <string name="settings_section_voice_announce">음성 발표</string>
+    <string name="settings_section_voice_commands">음성 명령</string>
+    <string name="settings_voice_announce_calling">저를 호출한 스테이션</string>
+    <string name="settings_voice_announce_calling_desc">스테이션이 당신을 호출할 때 콜사인과 신호 보고를 말하세요</string>
+    <string name="settings_voice_announce_qso">QSO 완료</string>
+    <string name="settings_voice_announce_qso_desc">QSO가 기록될 때 확인을 말하기</string>
+    <string name="settings_voice_announce_new_dxcc">새 DXCC CQ</string>
+    <string name="settings_voice_announce_new_dxcc_desc">작업하지 않은 DXCC 엔티티가 CQ를 호출할 때 말하기</string>
+    <string name="settings_voice_announce_new_prefix">새 프리픽스 CQ</string>
+    <string name="settings_voice_announce_new_prefix_desc">작업하지 않은 WPX 프리픽스가 CQ를 호출할 때 말하기</string>
+    <string name="settings_voice_commands">음성 명령 버튼</string>
+    <string name="settings_voice_commands_desc">메인 화면에 푸시 투 토크 마이크 버튼 표시. \'응답\', \'CQ 호출\', \'중지\', \'건너뛰기\' 또는 \'기록\'이라고 말하기. Android 오디오(전화 마이크 또는 Android 라우팅 USB)를 통해 FT8 수신이 작동 중일 때는 사용할 수 없음.</string>
+    <string name="settings_voice_tx_note">송신 중에는 공지가 절대 재생되지 않으므로 무전기 오디오에 새어나갈 수 없음.</string>
+    <string name="voice_button_desc">음성 명령</string>
+    <string name="voice_button_mic_busy_desc">음성 명령 사용 불가: 오디오 입력이 FT8 수신에 의해 사용 중</string>
+    <string name="voice_mic_busy">음성 명령을 사용할 수 없습니다: FT8 수신이 Android 오디오(휴대폰 마이크 또는 Android 경로 USB)를 통해 이루어지고 있습니다. 직접 USB 또는 네트워크 리그 오디오를 사용하면 가능합니다.</string>
+    <string name="voice_listening">청취 중…</string>
+    <string name="voice_not_understood">명령을 인식하지 못했습니다. \"answer\", \"call CQ\", \"stop\", \"skip\", 또는 \"log it\"을 시도해 보세요.</string>
+    <string name="voice_no_caller">응답할 스테이션이 없습니다</string>
+    <string name="voice_recognizer_unavailable">이 장치에서는 음성 인식을 사용할 수 없습니다</string>
+    <string name="voice_recognizer_error">음성 인식 오류</string>
+    <string name="rx_service_channel_name">백그라운드 수신</string>
+    <string name="rx_service_channel_desc">앱이 백그라운드에 있거나 화면이 꺼져 있어도 JTTY 디코딩을 계속 실행합니다</string>
+    <string name="rx_service_title">JTTYAF가 수신 중입니다</string>
+    <string name="rx_service_text">백그라운드에서 디코딩 중</string>
+    <string name="settings_adif_export">ADIF 로그 파일</string>
+    <string name="settings_adif_export_desc">백업 및 데스크탑 로거(LOG4OM) 모니터 가져오기를 위해 기록된 각 QSO를 jttyaf_log.adi에 추가</string>
+    <string name="settings_qrz_logbook">QRZ 로그북</string>
+    <string name="settings_qrz_logbook_desc">QRZ 로그북의 로그북 API 키 → 설정(계정 비밀번호 아님)</string>
+    <string name="settings_qrz_api_key_hint">귀하의 QRZ 로그북 API 키</string>
+    <string name="settings_section_power">전원 &amp; 열</string>
+    <string name="settings_keep_screen_on">화면 켜기 유지</string>
+    <string name="settings_keep_screen_on_desc">앱이 열려 있는 동안 디스플레이를 깨어 있게 유지합니다. 장시간 휴대용 세션에서는 끄세요 — 수신은 백그라운드에서 계속 작동하며 휴대폰은 훨씬 시원하게 유지됩니다</string>
+    <string name="settings_deep_decode">딥 디코드</string>
+    <string name="settings_deep_decode_desc">강한 신호 아래에서 약한 신호를 찾아내기 위해 빼기 후 재디코드하는 과정. 전체 CPU의 최대 75%까지 사용 — 가장 큰 단일 열 발생 원인. 약한 디코드를 일부 포기하고 시원하게 실행하려면 끄세요</string>
+    <string name="late_start_deferred">Too late this cycle (need %d ms clip) — waiting for next slot</string>
+    <string name="rate_prompt_eyebrow">좋은 세션</string>
+    <string name="rate_prompt_headline_entities_bands">%1$s entities across %2$s bands</string>
+    <string name="rate_prompt_headline_entities">%1$s entities in your log</string>
+    <string name="rate_prompt_headline_contacts_bands">%1$s contacts across %2$s bands</string>
+    <string name="rate_prompt_stat_qsos">QSOs</string>
+    <string name="rate_prompt_stat_dxcc">DXCC</string>
+    <string name="rate_prompt_stat_bands">밴드</string>
+    <string name="rate_prompt_minimal_title">속도 JTTYAF</string>
+    <string name="rate_prompt_minimal_body">You\'ve logged %1$d contacts with JTTYAF.</string>
+    <string name="rate_prompt_play_pitch">Google Play에서 빠른 리뷰는 다른 운영자가 JTTYAF를 찾는 데 도움을 줍니다.</string>
+    <string name="rate_prompt_remind_later">나중에 알림</string>
+    <string name="rate_prompt_dont_ask_again">다시 묻지 않음</string>
+    <string name="rate_prompt_play_action">Google Play에서 평가하기</string>
+    <string name="rate_prompt_feedback_action">피드백 보내기</string>
+    <string name="rate_prompt_feedback_title">개발자에게 피드백</string>
+    <string name="rate_prompt_feedback_body">개발자에게 바로 전송됩니다. 귀하의 호출부호와 앱 버전이 첨부됩니다.</string>
+    <string name="rate_prompt_feedback_hint">JTTYAF를 더 좋게 만들려면 무엇이 필요한지 알려주세요…</string>
+    <string name="rate_prompt_feedback_send">피드백 보내기</string>
+    <string name="rate_prompt_feedback_skip">건너뛰기</string>
+    <string name="about_font_attribution">UI 글꼴: Rasmus Andersson의 Inter (SIL OFL 1.1)</string>
+    <string name="serial_port_label_port_of">Port %1$d of %2$d</string>
+    <string name="serial_port_picker_dual_port_hint">듀얼 포트 칩: Yaesu 무선기는 CAT용으로 Enhanced 포트를 사용하고, Kenwood TS-890S/TS-990S는 Standard 포트를 사용합니다. 다른 포트는 RTS/DTR 키잉용입니다.</string>
+    <string name="settings_rx_channel">수신 오디오 채널</string>
+    <string name="settings_rx_channel_desc">디코딩할 스테레오 입력의 측면. 라디오가 한 채널만 제공할 경우 Left 또는 Right를 사용하세요.</string>
+    <string name="settings_rx_channel_mix">믹스</string>
+    <string name="settings_tx_channel">송신 오디오 채널</string>
+    <string name="settings_tx_channel_desc">송신 오디오가 전달되는 스테레오 출력 측면. 하나의 라디오를 스플리터 케이블로 제어할 때 Left 또는 Right를 사용하세요.</string>
+    <string name="settings_tx_channel_both">둘 다</string>
+    <string name="settings_channel_left">왼쪽</string>
+    <string name="settings_channel_right">맞아요</string>
+    <string name="settings_channel_mono_device">이 장치는 오디오 채널이 하나뿐이므로 선택할 측이 없습니다.</string>
+    <string name="settings_tx_channel_default_sink">측을 선택하려면 특정 오디오 출력 장치를 선택하세요. 기본 출력에서는 앱이 Android가 오디오를 어느 쪽으로 보내는지 알 수 없으므로 두 채널 모두로 전송합니다.</string>
+    <string name="settings_rx_channel_network_source">이 라디오의 오디오는 오디오 입력을 통해서가 아니라 네트워크 링크를 통해 들어오므로 선택할 측이 없습니다.</string>
+    <string name="settings_full_duplex">풀 듀플렉스</string>
+    <string name="settings_full_duplex_desc">자신의 전송 해독을 숨기지 말고 표시하세요. 위성 작업 시: 자신의 신호 강도와 돌아오는 주파수를 확인하세요.</string>
+    <string name="clock_sync_good">동기화됨</string>
+    <string name="clock_sync_fair">시계 확인</string>
+    <string name="clock_sync_poor">시계 꺼짐</string>
+    <string name="clock_sync_unknown">해독 없음</string>
+    <string name="clock_sync_cd">Clock sync: average decode offset %1$s, %2$s</string>
+    <string name="clock_sync_cd_auto">Clock sync: average decode offset %1$s, %2$s, %3$s</string>
+    <string name="car_engine_idle">JTTYAF는 아직 방송 중이 아닙니다. 실행되면 QSO 상태가 여기에 표시됩니다.</string>
+    <string name="car_engine_idle_action">JTTYAF 시작</string>
+    <string name="car_monitoring">모니터링 — 송신 꺼짐</string>
+    <string name="car_seq_step">Step %1$s (%2$d/%3$d)</string>
+    <string name="car_slot_tx">TX slot · %1$d s</string>
+    <string name="car_slot_rx">RX slot · %1$d s</string>
+    <string name="car_decodes_action">디코드</string>
+    <string name="car_decodes_title">최근 디코드</string>
+    <string name="car_no_decodes">아직 디코드 없음</string>
+</resources>

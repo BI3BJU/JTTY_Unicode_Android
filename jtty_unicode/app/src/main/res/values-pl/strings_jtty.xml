@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Obsługuj</string>
+    <string name="jtty_profile_generic">Ogólny</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Field Day</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Profil konkursu</string>
+    <string name="settings_jtty_profile_desc">Jak są pakowane wymiany: RTTY Roundup wysyła 599 + numer seryjny w jednej ramce, Field Day pakuje klasę i sekcję</string>
+    <string name="settings_jtty_echo_tx">Echo moich transmisji</string>
+    <string name="settings_jtty_echo_tx_desc">Pokaż tekst, który wysyłasz w oknie odbioru, jak maszyna telegraficzna</string>
+    <string name="settings_jtty_wide_search">Dekoduj cały pasmo</string>
+    <string name="settings_jtty_wide_search_desc">Drukuj każdą stację JTTY w zakresie od 300 do 2700 Hz. Tryb Off dekoduje tylko wokół Twojej częstotliwości RX, co oszczędza baterię</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">Nasłuchiwanie JTTY… Dekodowane dane będą wyświetlane tutaj w miarę ich nadejścia.</string>
+    <string name="operate_tx_hint">Wpisz wiadomość (maks. 80 znaków)</string>
+    <string name="operate_send">Wyślij</string>
+    <string name="operate_stop">Zatrzymaj</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Zbyt długa — JTTY wysyła maksymalnie 80 znaków</string>
+    <string name="operate_unpackable">Nie można wysłać tego tekstu</string>
+    <string name="operate_dx_call">Wywołanie DX</string>
+    <string name="operate_dx_call_hint">Stuknij dekoduj lub wpisz</string>
+    <string name="operate_serial">Numer seryjny</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Zaloguj QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Najpierw ustaw swój znak w Ustawieniach</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Przywróć domyślne</string>
+    <string name="operate_clear">Wyczyść</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(niekompletne)</string>
+    <string name="operate_sending">Wysyłanie</string>
+    <string name="tx_status_idle">Odbieranie</string>
+    <string name="tx_rx_offset">Przesunięcie RX/TX</string>
+</resources>

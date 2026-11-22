@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Operare</string>
+    <string name="jtty_profile_generic">Generale</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Field Day</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Profilo del contest</string>
+    <string name="settings_jtty_profile_desc">Come vengono impacchettati gli scambi: RTTY Roundup invia 599 + numero di serie in un frame, Field Day impacchetta classe e sezione</string>
+    <string name="settings_jtty_echo_tx">Echi le mie trasmissioni</string>
+    <string name="settings_jtty_echo_tx_desc">Mostra il testo che invii nella finestra di ricezione, come una teleprinter</string>
+    <string name="settings_jtty_wide_search">Decodifica l\'intera banda passante</string>
+    <string name="settings_jtty_wide_search_desc">Stampa ogni stazione JTTY tra 300 e 2700 Hz. Off decodifica solo intorno alla tua frequenza RX, risparmiando batteria</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">In ascolto per JTTY… Le decodifiche vengono stampate qui appena arrivano.</string>
+    <string name="operate_tx_hint">Digita un messaggio (max 80 caratteri)</string>
+    <string name="operate_send">Invia</string>
+    <string name="operate_stop">Ferma</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Troppo lungo — JTTY invia al massimo 80 caratteri</string>
+    <string name="operate_unpackable">Quel testo non può essere inviato</string>
+    <string name="operate_dx_call">Chiamata DX</string>
+    <string name="operate_dx_call_hint">Tocca un decode o digita</string>
+    <string name="operate_serial">Seriale</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Registra QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Imposta prima il tuo nominativo nelle Impostazioni</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Ripristina valori predefiniti</string>
+    <string name="operate_clear">Cancella</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(incompleto)</string>
+    <string name="operate_sending">Invio</string>
+    <string name="tx_status_idle">Ricezione</string>
+    <string name="tx_rx_offset">Offset RX/TX</string>
+</resources>

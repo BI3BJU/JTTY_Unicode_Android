@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Operasikan</string>
+    <string name="jtty_profile_generic">Umum</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Hari Lapangan</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Profil kontes</string>
+    <string name="settings_jtty_profile_desc">Bagaimana pertukaran dikemas: RTTY Roundup mengirim 599 + serial dalam satu frame, Hari Lapangan mengemas kelas dan seksi</string>
+    <string name="settings_jtty_echo_tx">Cermin transmisi saya</string>
+    <string name="settings_jtty_echo_tx_desc">Tampilkan teks yang Anda kirim di jendela penerima, seperti mesin teleprinter</string>
+    <string name="settings_jtty_wide_search">Dekode seluruh jalur lebar</string>
+    <string name="settings_jtty_wide_search_desc">Cetak setiap stasiun JTTY antara 300 dan 2700 Hz. Off hanya mendekode di sekitar frekuensi RX Anda, yang menghemat baterai</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">Mendengarkan JTTY… Dekode dicetak di sini saat mereka datang.</string>
+    <string name="operate_tx_hint">Ketik pesan (maks 80 karakter)</string>
+    <string name="operate_send">Kirim</string>
+    <string name="operate_stop">Berhenti</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Terlalu panjang — JTTY mengirim maksimal 80 karakter</string>
+    <string name="operate_unpackable">Teks itu tidak dapat dikirim</string>
+    <string name="operate_dx_call">Panggilan DX</string>
+    <string name="operate_dx_call_hint">Ketuk decode atau ketik</string>
+    <string name="operate_serial">Serial</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Log QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Tetapkan callsign Anda di Pengaturan terlebih dahulu</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Kembali ke default</string>
+    <string name="operate_clear">Bersihkan</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(tidak lengkap)</string>
+    <string name="operate_sending">Mengirim</string>
+    <string name="tx_status_idle">Menerima</string>
+    <string name="tx_rx_offset">Offset RX/TX</string>
+</resources>

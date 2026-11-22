@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_operate">Bedien</string>
+    <string name="jtty_profile_generic">Algemeen</string>
+    <string name="jtty_profile_rtty_roundup">RTTY Roundup</string>
+    <string name="jtty_profile_field_day">Field Day</string>
+    <string name="settings_section_jtty">JTTY</string>
+    <string name="settings_jtty_profile">Wedstrijdprofiel</string>
+    <string name="settings_jtty_profile_desc">Hoe uitwisselingen verpakt worden: RTTY Roundup stuurt 599 + serienummer in één frame, Field Day verpakt klasse en sectie</string>
+    <string name="settings_jtty_echo_tx">Echo mijn uitzendingen</string>
+    <string name="settings_jtty_echo_tx_desc">Toon de tekst die je verstuurt in het ontvangvenster, zoals een telex</string>
+    <string name="settings_jtty_wide_search">Decodeer de hele passband</string>
+    <string name="settings_jtty_wide_search_desc">Print elk JTTY station tussen 300 en 2700 Hz. Uit decodes alleen rond je RX-frequentie, wat batterij bespaart</string>
+    <string name="operate_title">JTTY</string>
+    <string name="operate_rx_empty">Luisteren naar JTTY… Decodes worden hier afgedrukt zodra ze binnenkomen.</string>
+    <string name="operate_tx_hint">Typ een bericht (maximaal 80 tekens)</string>
+    <string name="operate_send">Verstuur</string>
+    <string name="operate_stop">Stop</string>
+    <string name="operate_frames">%1$d frame(s) · %2$.1f s</string>
+    <string name="operate_too_long">Te lang — JTTY verstuurt maximaal 80 tekens</string>
+    <string name="operate_unpackable">Die tekst kan niet verstuurd worden</string>
+    <string name="operate_dx_call">DX-call</string>
+    <string name="operate_dx_call_hint">Tik op decoderen of typ</string>
+    <string name="operate_serial">Serienummer</string>
+    <string name="operate_rst">RST</string>
+    <string name="operate_log_qso">Log QSO</string>
+    <string name="operate_qso_logged">Logged %1$s</string>
+    <string name="operate_set_callsign_first">Stel eerst je roepnaam in bij Instellingen</string>
+    <string name="operate_macro_edit_title">Edit F%1$d macro</string>
+    <string name="operate_macro_help">%M your call · %H DX call · %E 599 + serial</string>
+    <string name="operate_macro_reset">Terugzetten naar standaard</string>
+    <string name="operate_clear">Wissen</string>
+    <string name="operate_own_tx">TX</string>
+    <string name="operate_incomplete">(onvolledig)</string>
+    <string name="operate_sending">Verzenden</string>
+    <string name="tx_status_idle">Ontvangen</string>
+    <string name="tx_rx_offset">RX/TX-offset</string>
+</resources>

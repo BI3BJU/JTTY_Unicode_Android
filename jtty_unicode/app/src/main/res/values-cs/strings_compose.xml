@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Compose UI strings (JTTYAF). The live app is the Jetpack Compose UI under
+  ~ com.bi3bju.jttyaf_plus; these are its user-facing strings, externalized for
+  ~ localization. The legacy strings.xml entries belong to the unreachable old
+  ~ XML/Fragment UI and are NOT used by the running app.
+  ~
+  ~ Translations live in values-<locale>/strings_compose.xml. English here is the
+  ~ source of truth — keep it byte-identical to the original UI text so the English
+  ~ layout never changes. Ham-radio abbreviations (CQ, QSO, DXCC, POTA, SOTA, RST)
+  ~ are intentionally left untranslated across all locales.
+-->
+<resources>
+
+    <!-- ===== Common / shared ===== -->
+    <string name="action_cancel">Zrušit</string>
+    <string name="action_save">Uložit</string>
+    <string name="action_done">Hotovo</string>
+    <string name="action_ok">OK</string>
+    <string name="action_exit">Ukončit</string>
+    <string name="common_none">Žádné</string>
+    <string name="common_off">Vypnuto</string>
+    <string name="common_not_configured">Nenakonfigurováno</string>
+    <string name="common_not_connected">Nepřipojeno</string>
+    <string name="common_pass">Prošlo</string>
+    <string name="common_fail">Selhalo</string>
+    <string name="common_test_connection">Otestovat připojení</string>
+
+    <!-- ===== Continents ===== -->
+    <string name="continent_na">Severní Amerika</string>
+    <string name="continent_sa">Jižní Amerika</string>
+    <string name="continent_eu">Evropa</string>
+    <string name="continent_af">Afrika</string>
+    <string name="continent_as">Asie</string>
+    <string name="continent_oc">Oceánie</string>
+    <string name="continent_an">Antarktida</string>
+
+    <!-- ===== Bottom navigation tabs ===== -->
+    <string name="tab_decode">Dekódování</string>
+    <string name="tab_map">Mapa</string>
+    <string name="tab_waterfall">Vodopád</string>
+    <string name="tab_pota">POTA</string>
+    <string name="tab_logbook">Deník</string>
+    <string name="tab_settings">Nastavení</string>
+
+    <!-- ===== Status pills (decode list badges) ===== -->
+    <string name="status_new_dxcc">NOVÉ DXCC</string>
+    <string name="status_new_grid">NOVÝ LOKÁTOR</string>
+    <string name="status_new_band">NOVÉ PÁSMO</string>
+    <string name="status_pota">POTA</string>
+    <string name="status_new_pota">NOVÉ POTA</string>
+    <string name="status_sota">SOTA</string>
+    <string name="status_needed">POTŘEBA</string>
+    <string name="status_worked">SPOJENO</string>
+    <string name="status_confirmed">POTVRZENO</string>
+    <string name="status_cq">CQ</string>
+    <string name="status_pending">ČEKÁ</string>
+
+    <!-- ===== Splash / app-level ===== -->
+    <string name="splash_tagline">Support the transmission of Unicode codes</string>
+    <string name="splash_initializing">INICIALIZACE RÁDIA</string>
+    <string name="splash_version">v%1$s · build %2$s</string>
+    <string name="app_set_callsign_first">Před voláním CQ nastavte svou volací značku v Nastavení</string>
+    <string name="app_hunt_on">Lov zapnut — automatická odpověď na CQ</string>
+    <string name="app_hunt_off">Lov vypnut — volání CQ, pracujete jen s odpověďmi</string>
+    <string name="app_mode_switched">Režim: %1$s</string>
+    <string name="app_mode_switch_busy">Během vysílání nelze přepnout režim</string>
+    <string name="main_tx_volume">Hlasitost TX: %1$d%%</string>
+
+    <!-- ===== Exit dialog ===== -->
+    <string name="exit_title">UKONČIT JTTYAF?</string>
+    <string name="exit_message">Opravdu chcete aplikaci zavřít? Každé aktivní QSO bude zrušeno.</string>
+
+    <!-- ===== Frequency picker ===== -->
+    <string name="freq_select_title">VYBRAT FREKVENCI</string>
+    <string name="freq_show_alternates">ZOBRAZIT ALTERNATIVY</string>
+    <string name="freq_hide_alternates">SKRÝT ALTERNATIVY</string>
+    <string name="freq_alt_prefix">"ALT "</string>
+
+    <!-- ===== Operator card ===== -->
+    <string name="op_no_call">BEZ ZNAČKY</string>
+    <string name="op_no_grid">Lokátor nenastaven</string>
+    <string name="op_tap_to_edit">Klepnutím upravit</string>
+    <string name="op_stat_rig">TRX</string>
+    <string name="op_stat_antenna">ANTÉNA</string>
+    <string name="op_stat_power">VÝKON</string>
+
+    <!-- ===== Export log sheet ===== -->
+    <string name="export_title">EXPORTOVAT QSOs</string>
+    <string name="export_date_range">ROZSAH DAT</string>
+    <string name="export_date_from_placeholder">"Od  YYYYMMDD"</string>
+    <string name="export_date_to_placeholder">"Do  YYYYMMDD"</string>
+    <string name="export_share">Sdílet</string>
+    <string name="export_filter_confirmed">jen potvrzené</string>
+    <string name="export_filter_unconfirmed">jen nepotvrzené</string>
+    <string name="export_record_singular">záznam</string>
+    <string name="export_record_plural">záznamů</string>
+    <string name="export_summary_all">vše</string>
+    <string name="export_summary_key">\'%1$s\'</string>
+    <string name="export_summary_suffix">" · %1$s"</string>
+    <string name="export_summary">%1$d %2$s odpovídá %3$s%4$s</string>
+    <string name="export_preparing">Příprava…</string>
+    <string name="export_share_chooser_title">Sdílet deníky QSO</string>
+    <string name="export_saved_to">Uloženo do %1$s</string>
+    <string name="export_save_failed">Uložení do Stažených selhalo</string>
+    <string name="export_temp_file_failed">Nepodařilo se vytvořit dočasný soubor</string>
+
+    <!-- ===== TX strip ===== -->
+    <string name="tx_transmitting">VYSÍLÁNÍ</string>
+    <string name="tx_listening">POSLECH</string>
+    <string name="tx_hunt">Lov</string>
+    <string name="tx_call_cq">Volat CQ</string>
+    <string name="tx_stop">Stop</string>
+
+    <!-- ===== Hound (DXpedition) setup ===== -->
+    <string name="hound_title">Pracovat s DXpedicí (Hound)</string>
+    <string name="hound_help">Nejprve nalaďte TRX na zveřejněnou frekvenci Foxe. Voláte nahoře (1000–4000 Hz); aplikace vás automaticky QSY přesune dolů tam, kde Fox odpovídá, a odešle váš report.</string>
+    <string name="hound_fox_callsign">Volací značka Foxe</string>
+    <string name="hound_call_frequency">Frekvence volání (Hz, 1000–4000)</string>
+    <string name="hound_start">Start</string>
+
+    <!-- ===== CAT status chip ===== -->
+    <string name="cat_status_chip_label">CAT</string>
+    <string name="cat_status_connected">CAT připojen — klepnutím znovu připojit</string>
+    <string name="cat_status_connecting">CAT se připojuje…</string>
+    <string name="cat_status_disconnected">CAT odpojen — klepnutím připojit</string>
+    <string name="cat_status_error">Chyba připojení CAT — klepnutím opakovat</string>
+
+    <!-- ===== SWR lockout banner ===== -->
+    <string name="swr_lockout_title">TX ZASTAVENO — Zjištěn vysoký SWR (%1$s)</string>
+    <string name="swr_lockout_body">Před vysíláním zkontrolujte anténu / napáječ.</string>
+    <string name="swr_lockout_dismiss">ZAVŘÍT</string>
+    <string name="swr_lockout_toast">TX zablokováno — aktivní blokace SWR. Nejprve zavřete banner blokace.</string>
+
+    <!-- ===== Active QSO panel ===== -->
+    <string name="qsopanel_calling_cq">Volání CQ</string>
+    <string name="qsopanel_hunting">Listening for CQ</string>
+    <string name="qsopanel_searching">Hledání...</string>
+    <string name="qsopanel_qsoing_with">QSO s %1$s</string>
+    <string name="qsopanel_waiting_for">Čekání na %1$s</string>
+    <string name="qsopanel_tap_to_view">klepnutím zobrazit ↗</string>
+    <string name="qsopanel_tx_message">TX: %1$s</string>
+    <string name="qsopanel_waiting_messages">Čekání na zprávy...</string>
+    <string name="qsopanel_log_action">ZAPSAT</string>
+    <string name="qsopanel_queue">FRONTA</string>
+
+    <!-- ===== Decode screen ===== -->
+    <string name="decode_title">Dekódování</string>
+    <string name="decode_subtitle">"%1$s  •  %2$d dekódováno v tomto cyklu"</string>
+    <string name="decode_clear_list">Vymazat seznam dekódů</string>
+    <string name="decode_utc_placeholder">UTC : --:--:--</string>
+    <string name="decode_time_group_utc">%1$s UTC</string>
+    <string name="decode_filter_all">Vše</string>
+    <string name="decode_filter_cq_calls">Volání CQ</string>
+    <string name="decode_filter_cq_pota">CQ POTA</string>
+    <string name="decode_filter_new_dxcc">Nové DXCC</string>
+    <string name="decode_filter_needed">Potřeba</string>
+    <string name="decode_filter_for_me">Pro mě</string>
+    <string name="decode_empty_cq_title">Žádná volání CQ</string>
+    <string name="decode_empty_cq_body">Na tomto pásmu právě nikdo nevolá CQ.</string>
+    <string name="decode_empty_pota_title">Žádné spoty POTA</string>
+    <string name="decode_empty_pota_body">Na tomto pásmu zatím nebyly dekódovány žádné aktivace parků — otevřete POTA → Lov pro seznam spotů.</string>
+    <string name="decode_empty_dxcc_title">Žádné nové DXCC</string>
+    <string name="decode_empty_dxcc_body">Zatím nebyly dekódovány žádné nespojené entity DXCC.</string>
+    <string name="decode_empty_needed_title">Nic není potřeba</string>
+    <string name="decode_empty_needed_body">Nebyly nalezeny žádné stanice vyžadující potvrzení.</string>
+    <string name="decode_empty_forme_title">Žádná volání pro vás</string>
+    <string name="decode_empty_forme_body">Právě nikdo nevolá vaši volací značku.</string>
+    <string name="decode_empty_default_title">Žádné dekódované signály</string>
+    <string name="decode_empty_default_body">Čekání na signály %1$s...</string>
+    <string name="decode_label_calling">→ VOLÁ</string>
+    <string name="decode_label_cq">CQ</string>
+    <string name="decode_label_to_you">↓ PRO VÁS</string>
+
+    <!-- ===== QSO sheet ===== -->
+    <string name="qso_complete">QSO dokončeno</string>
+    <string name="qso_call_action">Volat %1$s</string>
+    <string name="qso_qrz_link">QRZ ↗</string>
+    <string name="qso_stat_signal">Signál</string>
+    <string name="qso_stat_distance">Vzdálenost</string>
+    <string name="qso_stat_azimuth">Azimut</string>
+    <string name="qso_stat_band">Pásmo</string>
+    <string name="qso_sequence_header">SEKVENCE QSO</string>
+    <string name="qso_step_send_call">Odeslat značku</string>
+    <string name="qso_step_report_sent">Report odeslán</string>
+    <string name="qso_step_roger">Roger</string>
+    <string name="qso_step_confirm">Potvrdit</string>
+    <string name="qso_step_logged">Zapsáno</string>
+    <string name="qso_live_sending">QSO s %1$s — Odesílání %2$s</string>
+    <string name="qso_live_waiting">Čekání na odpověď od %1$s…</string>
+    <string name="qso_live_transmitting">Vysílání…</string>
+    <string name="qso_live_step_fallback">zpráva</string>
+    <string name="qso_tx_now">TX NYNÍ</string>
+    <string name="qso_tx_next">TX DALŠÍ</string>
+
+    <!-- ===== Logbook ===== -->
+    <string name="log_tab_stats">Statistiky</string>
+    <string name="log_tab_recent">Nedávné</string>
+    <string name="log_tab_awards">Diplomy</string>
+    <string name="log_title">Deník</string>
+    <string name="log_subtitle_qsos_all_bands">%1$d QSOs · Všechna pásma</string>
+    <string name="log_cd_sync_to_logging_services">Synchronizovat s logovacími službami</string>
+    <string name="log_cd_export_qsos">Exportovat QSOs</string>
+    <string name="log_stat_total_qsos">Celkem QSOs</string>
+    <string name="log_stat_dxcc_entities">Entity DXCC</string>
+    <string name="log_stat_cq_zones">Zóny CQ</string>
+    <string name="log_stat_itu_zones">Zóny ITU</string>
+    <string name="log_section_band_distribution">Rozdělení podle pásem</string>
+    <string name="log_section_award_progress">Pokrok diplomů</string>
+    <string name="log_award_dxcc_mixed">DXCC smíšené</string>
+    <string name="log_award_vucc_grid_squares">Lokátory VUCC</string>
+    <string name="log_award_dxcc_challenge">DXCC Challenge</string>
+    <string name="log_section_grid_coverage">Pokrytí lokátorů</string>
+    <string name="log_section_signal_trend">Trend signálu</string>
+    <string name="log_no_qsos_yet">Zatím žádná QSOs</string>
+    <string name="log_no_qsos_recorded_yet">Zatím nezaznamenána žádná QSOs</string>
+    <string name="log_state_usa">%1$s, USA</string>
+    <string name="log_cd_qso_actions">Akce QSO</string>
+    <string name="log_action_edit">Upravit</string>
+    <string name="log_action_delete">Smazat</string>
+    <string name="log_award_dxcc_mixed_desc">Spojte a potvrďte 100 entit DXCC na libovolném pásmu/módu</string>
+    <string name="log_award_was">WAS</string>
+    <string name="log_award_was_desc">Spojte všech 50 států USA s potvrzením</string>
+    <string name="log_award_waz">WAZ</string>
+    <string name="log_award_waz_desc">Spojte všech 40 zón CQ s potvrzením</string>
+    <string name="log_award_vucc">VUCC</string>
+    <string name="log_award_vucc_desc">VHF/UHF Century Club -- 100 lokátorů na jednom pásmu</string>
+    <string name="log_award_iota">IOTA</string>
+    <string name="log_award_iota_desc">Islands on the Air -- spojení se stanicemi na vyhrazených ostrovech</string>
+    <string name="log_edit_qso">Upravit QSO</string>
+    <string name="log_field_callsign">Volací značka</string>
+    <string name="log_field_grid_locator">Lokátor</string>
+    <string name="log_field_mode">Mód</string>
+    <string name="log_delete_qso_title">SMAZAT QSO?</string>
+    <string name="log_delete_qso_body_callsign">Odstranit QSO s %1$s z deníku? Tuto akci nelze vrátit.</string>
+    <string name="log_delete_qso_body">Odstranit toto QSO z deníku? Tuto akci nelze vrátit.</string>
+    <string name="log_sync_title_no_services">ŽÁDNÉ POVOLENÉ SLUŽBY</string>
+    <string name="log_sync_title_syncing">SYNCHRONIZACE…</string>
+    <string name="log_sync_title_complete">SYNCHRONIZACE DOKONČENA</string>
+    <string name="log_sync_enable_services">Povolte Cloudlog/Wavelog/Nextlog, QRZ nebo World Radio League v Nastavení a zkuste to znovu.</string>
+    <string name="log_sync_progress_count">%1$d z %2$d QSOs</string>
+    <string name="log_sync_cloudlog_accepted">Cloudlog / Wavelog / Nextlog: %1$d přijato</string>
+    <string name="log_sync_qrz_accepted">QRZ: %1$d přijato</string>
+    <string name="log_sync_nothing_to_upload">V deníku zatím nejsou žádná QSOs k nahrání.</string>
+    <string name="log_sync_working">Pracuji…</string>
+
+    <!-- ===== POTA ===== -->
+    <string name="pota_tab_activate">Aktivovat</string>
+    <string name="pota_tab_hunt">Lov</string>
+    <string name="pota_tab_history">Historie</string>
+    <!-- POTA contact row: time since the QSO. %d is the count in that unit. -->
+    <string name="pota_qso_age_just_now">právě teď</string>
+    <plurals name="pota_qso_age_seconds">
+        <item quantity="one">před %d s</item>
+        <item quantity="few">před %d s</item>
+        <item quantity="many">před %d s</item>
+        <item quantity="other">před %d s</item>
+    </plurals>
+    <plurals name="pota_qso_age_minutes">
+        <item quantity="one">před %d min</item>
+        <item quantity="few">před %d min</item>
+        <item quantity="many">před %d min</item>
+        <item quantity="other">před %d min</item>
+    </plurals>
+    <plurals name="pota_qso_age_hours">
+        <item quantity="one">před %d h</item>
+        <item quantity="few">před %d h</item>
+        <item quantity="many">před %d h</item>
+        <item quantity="other">před %d h</item>
+    </plurals>
+    <plurals name="pota_qso_age_days">
+        <item quantity="one">před %d d</item>
+        <item quantity="few">před %d d</item>
+        <item quantity="many">před %d d</item>
+        <item quantity="other">před %d d</item>
+    </plurals>
+    <string name="pota_qso_time_show_utc">Zobrazit čas UTC</string>
+    <string name="pota_start_activation">Zahájit aktivaci</string>
+    <string name="pota_park_reference_label">Reference parku (např. K-1234)</string>
+    <string name="pota_notes_optional_label">Poznámky (volitelné)</string>
+    <string name="pota_enter_park_reference_first">Nejprve zadejte referenci parku</string>
+    <string name="pota_activating">Aktivace %1$s</string>
+    <string name="pota_activation_ended">Aktivace ukončena</string>
+    <string name="pota_set_callsign_first">Nejprve nastavte svou volací značku v Nastavení</string>
+    <string name="pota_self_spot_posted">Vlastní spot odeslán</string>
+    <string name="pota_self_spot_failed">Vlastní spot selhal — zkontrolujte log</string>
+    <string name="pota_active_park">AKTIVNÍ — %1$s</string>
+    <string name="pota_qsos">QSOs</string>
+    <string name="pota_dupe">duplikát</string>
+    <string name="pota_contacts_map">Mapa spojení</string>
+    <string name="pota_back">Zpět</string>
+    <string name="pota_valid_activation">platná aktivace</string>
+    <string name="pota_to_valid">%1$d do platnosti</string>
+    <string name="pota_elapsed">Uplynulo</string>
+    <string name="pota_since_start">od začátku</string>
+    <string name="pota_self_spot">Vlastní spot</string>
+    <string name="pota_end_activation">Ukončit aktivaci</string>
+    <string name="pota_notes_quote">“%1$s”</string>
+    <string name="pota_tx_cq_preview">TX CQ vyjde jako “CQ POTA %1$s %2$s”.</string>
+    <string name="pota_no_spots">Právě žádné spoty FT8 POTA.</string>
+    <string name="pota_active_spots">%1$d aktivních spotů FT8</string>
+    <string name="pota_targeting">Cíl %1$s @ %2$s kHz (%3$s) — přepněte na Dekódování pro volání</string>
+    <string name="pota_no_past_activations">Zatím žádné minulé aktivace.</string>
+    <string name="pota_no_browser_available">Není dostupný žádný prohlížeč</string>
+    <string name="pota_export_failed">Export selhal — zkontrolujte log</string>
+    <string name="pota_status_active">aktivní</string>
+    <string name="pota_qso_count">%1$d QSO</string>
+    <string name="pota_share_adif">Sdílet ADIF</string>
+    <string name="pota_open_pota_app">Otevřít pota.app</string>
+    <string name="pota_upload_to_pota">Nahrát do POTA</string>
+    <string name="pota_upload_success">Nahráno %1$d deníků parků do POTA</string>
+    <string name="pota_upload_failed">Nahrání selhalo: %1$s</string>
+    <string name="pota_upload_server_error">POTA nemohlo zpracovat nahrání. Zkontrolujte, že reference parku je platná a vaše volací značka je registrována v POTA, a zkuste to znovu.</string>
+    <string name="pota_upload_busy">Servery POTA jsou dočasně nedostupné. Několikrát jsme to zkusili bez úspěchu — zkuste to prosím znovu za pár minut.</string>
+    <string name="pota_upload_network_error">Nepodařilo se spojit s POTA. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
+    <string name="pota_login_title">Přihlásit se do POTA</string>
+    <string name="pota_login_desc">Použijte e-mail a heslo svého účtu pota.app.</string>
+    <string name="pota_login_email">E-mail</string>
+    <string name="pota_login_password">Heslo</string>
+    <string name="pota_login_button">Přihlásit se</string>
+    <string name="pota_login_cancel">Zrušit</string>
+    <string name="pota_login_failed">Přihlášení selhalo: %1$s</string>
+    <string name="pota_login_or">nebo</string>
+    <string name="pota_login_social">Přihlásit se přes Google / Facebook / Amazon</string>
+    <string name="pota_oauth_title">Přihlásit se do POTA</string>
+    <string name="pota_add_park">Přidat park</string>
+    <string name="pota_remove_park">Odstranit</string>
+    <string name="pota_max_parks_reached">Dosažen maximální počet 10 parků</string>
+    <string name="pota_spotted_n_parks">Spotováno v %1$d parcích</string>
+    <string name="pota_parks_more">+%1$d dalších</string>
+
+    <!-- ===== Debug log / Map / Waterfall ===== -->
+    <string name="debug_title">Ladění</string>
+    <string name="debug_line_count">%1$d řádků</string>
+    <string name="debug_logcat_on_suffix">" · logcat ON"</string>
+    <string name="debug_close">Zavřít</string>
+    <string name="debug_share">Sdílet</string>
+    <string name="debug_clear">Vymazat</string>
+    <string name="debug_logcat_on">Logcat: ON</string>
+    <string name="debug_logcat_off">Logcat: OFF</string>
+    <string name="debug_no_log_file">žádný soubor logu</string>
+    <string name="debug_log_cleared">log vymazán</string>
+    <string name="debug_share_chooser_title">Sdílet debug.log</string>
+    <string name="map_title">Mapa</string>
+    <string name="map_no_grid_set">Lokátor nenastaven</string>
+    <string name="map_station_count">%1$d stanic</string>
+    <string name="map_station_count_with_heard">%1$d stanic · %2$d slyšeno</string>
+    <string name="map_psk_error">PSK Reporter nedostupný: %1$s</string>
+    <string name="map_projection_equirectangular">Ekvirektangulární</string>
+    <string name="map_projection_azimuthal">Azimutální ekvidistantní</string>
+    <string name="map_mode_standard">STD</string>
+    <string name="map_mode_azimuthal">AZ</string>
+    <string name="map_overlay_psk">PSK</string>
+    <string name="map_info_distance">Vzdálenost</string>
+    <string name="map_info_bearing">Azimut</string>
+    <string name="map_info_snr">SNR</string>
+    <string name="waterfall_title">Vodopád</string>
+    <string name="waterfall_toggle_nr">NR</string>
+    <string name="waterfall_toggle_msg">MSG</string>
+    <string name="waterfall_status_live">ŽIVĚ</string>
+
+    <!-- ===== Settings: format helpers ===== -->
+    <string name="settings_minutes_format">%1$d min</string>
+    <string name="settings_tries_format">%1$d pokusů</string>
+    <string name="settings_milliseconds_format">%1$d ms</string>
+    <string name="settings_hz_format">%1$d Hz</string>
+    <string name="settings_hz_str_format">%1$s Hz</string>
+    <string name="settings_percent_format">%1$d%%</string>
+    <string name="settings_bands_enabled_format">%1$d z %2$d povoleno</string>
+    <string name="settings_min_max_suffix">%1$d–%2$d %3$s</string>
+    <string name="settings_build_date_format">Build %1$s</string>
+    <string name="settings_version_value">v%1$s</string>
+
+    <!-- ===== Settings: sections ===== -->
+    <string name="settings_title">Nastavení</string>
+    <string name="settings_section_operator_identity">IDENTITA OPERÁTORA</string>
+    <string name="settings_section_radio">RÁDIO</string>
+    <string name="settings_section_audio">AUDIO</string>
+    <string name="settings_section_transmission">VYSÍLÁNÍ</string>
+    <string name="settings_section_auto_sequence">AUTO-SEKVENCE</string>
+    <string name="settings_section_decode_highlights">ZVÝRAZNĚNÍ DEKÓDŮ</string>
+    <string name="settings_section_callsign_blocklist">SEZNAM BLOKOVANÝCH ZNAČEK</string>
+    <string name="settings_section_decode_filters">FILTRY DEKÓDŮ</string>
+    <string name="settings_section_needed_dx_alerts">UPOZORNĚNÍ POTŘEBNÉ DX</string>
+    <string name="settings_section_logging_awards">LOGOVÁNÍ &amp; DIPLOMY</string>
+    <string name="settings_section_advanced">POKROČILÉ</string>
+    <string name="settings_section_about">O APLIKACI</string>
+    <string name="settings_section_language">JAZYK</string>
+
+    <!-- ===== Settings: drill-down category labels ===== -->
+    <string name="settings_cat_radio_audio">Rádio &amp; Audio</string>
+    <string name="settings_cat_transmission">Vysílání</string>
+    <string name="settings_cat_decode_filters">Dekódování &amp; Filtry</string>
+    <string name="settings_cat_logging">Logování &amp; Diplomy</string>
+    <string name="settings_cat_advanced">Pokročilé</string>
+    <string name="settings_cat_about">O aplikaci</string>
+    <string name="settings_cat_time_sync">Synchronizace času</string>
+    <string name="settings_cat_time_sync_desc">Ruční korekce hodin pro provoz bez připojení</string>
+
+    <!-- ===== Settings: Time Sync (manual clock correction) ===== -->
+    <string name="settings_time_correction_section">Ruční korekce</string>
+    <string name="settings_time_current_label">Aktuální korekce</string>
+    <string name="settings_time_correction_reset">Vynulovat</string>
+    <string name="settings_time_correction_desc">Posuňte hodiny aplikace, když nemáte internet pro synchronizaci. FT8 potřebuje UTC s přesností asi 1 sekunda. Upravujte, dokud se sloupec DT u dekódovaných stanic nevycentruje blízko 0.</string>
+    <string name="settings_time_suggest_section">Návrh z dekódů</string>
+    <string name="settings_time_suggest_none">Zatím žádné dekódy — začněte přijímat pro získání návrhu.</string>
+    <string name="settings_time_suggest_label">Nedávný průměrný DT: %1$s</string>
+    <string name="settings_time_suggest_apply">Použít navrženou korekci</string>
+
+    <!-- ===== Settings: operator identity ===== -->
+    <string name="settings_auto_update_grid">Auto-aktualizace lokátoru (GPS)</string>
+    <string name="settings_auto_update_grid_desc">Použít GPS zařízení pro udržení aktuálního lokátoru Maidenhead</string>
+
+    <!-- ===== Settings: radio ===== -->
+    <string name="settings_rig_model">Model TRX</string>
+    <string name="settings_control_mode">Režim řízení</string>
+    <string name="settings_connection_mode">Režim připojení</string>
+    <string name="settings_baud_rate">Přenosová rychlost</string>
+    <string name="settings_band_frequency">Pásmo &amp; Frekvence</string>
+    <string name="settings_enabled_bands">Povolená pásma</string>
+    <string name="settings_audio_frequency">Audio frekvence</string>
+    <string name="settings_spectrum_width">Šířka spektra</string>
+
+    <!-- ===== Settings: audio ===== -->
+    <string name="settings_audio_input">Audio vstup</string>
+    <string name="settings_audio_output">Audio výstup</string>
+    <string name="settings_tx_volume">Hlasitost TX</string>
+    <string name="settings_tx_volume_desc" formatted="false">Úroveň vysílaného audia (hardwarová tlačítka ±5%)</string>
+
+    <!-- ===== Settings: transmission ===== -->
+    <string name="settings_tx_rx_split">Split TX/RX</string>
+    <string name="settings_tx_rx_split_desc">Vysílat na jiné frekvenci než přijímat</string>
+    <string name="settings_tx_watchdog">TX Watchdog</string>
+    <string name="settings_tx_watchdog_desc">Automaticky zastavit vysílání po vypršení limitu</string>
+    <string name="settings_stop_after">Zastavit po</string>
+    <string name="settings_stop_after_desc">Zastavit volání po N neúspěšných pokusech</string>
+    <string name="settings_max_73">Max. odeslání 73</string>
+    <string name="settings_max_73_desc">Nejvyšší počet vysílání RR73/73 na spojení, než se pokračuje dál</string>
+    <string name="settings_max_73_auto">Automaticky</string>
+
+    <!-- ===== Settings: auto-sequence ===== -->
+    <string name="settings_hunt">Lov (auto-odpověď na CQ)</string>
+    <string name="settings_hunt_desc">Aktivně volat stanice volající CQ. Stejné jako tlačítko HUNT na liště TX. Vypnuto = volat CQ a pracovat jen se stanicemi, které vám odpoví.</string>
+    <string name="settings_auto_call_followed">Auto-volat sledované</string>
+    <string name="settings_auto_call_followed_desc">Automaticky pokračovat ve volání sledovaných volacích značek</string>
+    <string name="settings_fast_turnaround">Rychlý obrat</string>
+    <string name="settings_fast_turnaround_desc">Dekódovat ~1 s dříve, abyste mohli odpovědět na CQ v dalším slotu místo čekání. Může vynechat stanice s velkým posunem hodin.</string>
+    <string name="settings_auto_cq_after_qso">Auto-CQ po QSO</string>
+    <string name="settings_auto_cq_after_qso_desc">Automaticky pokračovat ve volání CQ po každém dokončeném spojení — bez opětovného klepnutí. Zůstává na vaší frekvenci (ignoruje Lov). Běží, dokud nezastavíte nebo dokud TX Watchdog nevyprší bez odpovědí.</string>
+
+    <!-- ===== Settings: decode highlights ===== -->
+    <string name="settings_highlight_new_dxcc">Nové DXCC</string>
+    <string name="settings_highlight_new_dxcc_desc">Zvýraznit stanice z nespojené entity DXCC</string>
+    <string name="settings_highlight_new_grid">Nový lokátor</string>
+    <string name="settings_highlight_new_grid_desc">Zvýraznit dosud nespojené lokátory Maidenhead</string>
+    <string name="settings_highlight_new_band">Nové pásmo</string>
+    <string name="settings_highlight_new_band_desc">Zvýraznit stanice spojené jen na jiných pásmech</string>
+    <string name="settings_highlight_pota">Aktivátoři POTA</string>
+    <string name="settings_highlight_pota_desc">Zvýraznit spotované aktivátory POTA; nové parky vyniknou</string>
+    <string name="settings_highlight_worked">Dříve spojeno</string>
+    <string name="settings_highlight_worked_desc">Označit stanice již ve vašem deníku</string>
+    <string name="settings_distance_unit">Vzdálenost v mílích</string>
+    <string name="settings_distance_unit_desc">Zobrazovat vzdálenosti v mílích místo kilometrů</string>
+
+    <!-- ===== Settings: callsign blocklist ===== -->
+    <string name="settings_exact_callsigns">Přesné volací značky</string>
+    <string name="settings_exact_callsigns_desc">Blokovat shodu celé značky</string>
+    <string name="settings_prefixes">Předpony</string>
+    <string name="settings_prefixes_desc">Blokovat podle předpony volací značky (např. RA)</string>
+    <string name="settings_keywords">Klíčová slova</string>
+    <string name="settings_keywords_desc">Blokovat podle podřetězce ve značce nebo zprávě (např. POTA, /P)</string>
+
+    <!-- ===== Settings: decode filters ===== -->
+    <string name="settings_show_only_cq">Zobrazit jen CQ</string>
+    <string name="settings_show_only_cq_desc">Skrýt vše kromě zpráv typu CQ</string>
+    <string name="settings_dx_only">Jen DX</string>
+    <string name="settings_dx_only_desc">Zobrazit jen stanice mimo váš vlastní kontinent</string>
+    <string name="settings_needed_only">Jen potřebné</string>
+    <string name="settings_needed_only_desc">Zobrazit jen dosud nepotvrzené stanice (QSL)</string>
+    <string name="settings_filter_by_continent">Filtrovat podle kontinentu</string>
+    <string name="settings_filter_by_continent_desc">Zobrazit jen stanice z vybraného kontinentu</string>
+    <string name="settings_continent">Kontinent</string>
+    <string name="settings_skip_directional_cq">Přeskočit směrová CQ (auto-odpověď)</string>
+    <string name="settings_skip_directional_cq_desc">Neodpovídat automaticky na CQ DX/EU/JA… mířená na jiné DXCC</string>
+    <string name="settings_hide_directional_cq">Skrýt směrová CQ ne pro mě</string>
+    <string name="settings_hide_directional_cq_desc">Skrýt regionálně mířená CQ, která necílí na vaše DXCC</string>
+
+    <!-- ===== Settings: needed-DX alerts ===== -->
+    <string name="settings_alert_new_dxcc">Nové DXCC</string>
+    <string name="settings_alert_new_dxcc_desc">Zvuk + vibrace + upozornění, když nespojená entita DXCC volá CQ</string>
+    <string name="settings_alert_new_state">Nový stát USA</string>
+    <string name="settings_alert_new_state_desc">Zvuk + vibrace + upozornění, když stanice z nespojeného státu USA volá CQ (stát z lokátoru)</string>
+
+    <!-- ===== Settings: logging &amp; awards ===== -->
+    <string name="settings_save_swl_decodes">Ukládat SWL dekódy</string>
+    <string name="settings_save_swl_decodes_desc">Zaznamenávat všechny dekódované zprávy do databáze</string>
+    <string name="settings_save_swl_qsos">Ukládat SWL QSOs</string>
+    <string name="settings_save_swl_qsos_desc">Zaznamenávat QSOs zjištěná mezi jinými stanicemi</string>
+    <string name="settings_pskreporter">PSKReporter</string>
+    <string name="settings_pskreporter_desc">Nahrávat dekódované spoty na pskreporter.info</string>
+    <string name="settings_qrz_com">QRZ.com</string>
+    <string name="settings_qrz_com_desc">Automaticky nahrávat QSOs do QRZ Logbook</string>
+    <string name="settings_qrz_profile_lookup">Vyhledávání profilů QRZ</string>
+    <string name="settings_qrz_profile_lookup_desc">Uživatelské jméno + heslo pro QRZ XML API (avatary)</string>
+    <string name="settings_cloudlog">Cloudlog / Wavelog / Nextlog</string>
+    <string name="settings_cloudlog_desc">Automaticky nahrávat QSOs do instance Cloudlog, Wavelog nebo Nextlog</string>
+
+    <!-- ===== Settings: advanced ===== -->
+    <string name="settings_ptt_delay">Zpoždění PTT</string>
+    <string name="settings_ptt_delay_desc">Zpoždění po PTT před zahájením vysílaného audia</string>
+    <string name="settings_tx_delay">Zpoždění TX</string>
+    <string name="settings_tx_delay_desc">Zpoždění před vysíláním pro dekódování předchozího cyklu</string>
+    <string name="settings_late_start_tolerance">Tolerance pozdního startu</string>
+    <string name="settings_late_start_tolerance_desc">Povolit zahájení TX až N ms do cyklu; úvodní audio se ořízne, aby TX skončilo na hranici cyklu</string>
+
+    <!-- ===== Settings: about ===== -->
+    <string name="settings_faq_support">FAQ &amp; Podpora</string>
+    <string name="settings_report_bug">Nahlásit chybu</string>
+    <string name="bug_report_description_hint">Popište, co se pokazilo…</string>
+    <string name="bug_report_send_email">Odeslat e-mail</string>
+    <string name="bug_report_no_email_app">Nebyla nalezena žádná e-mailová aplikace pro odeslání hlášení</string>
+    <string name="bug_report_open_github">Otevřít issue na GitHubu</string>
+    <string name="settings_debug_desc">Zobrazit / sdílet debug.log</string>
+    <string name="settings_share_logs">Sdílet logy</string>
+    <string name="settings_share_logs_desc">Odeslat debug.log e-mailem, na Discord, Drive…</string>
+    <string name="settings_view_logs">Zobrazit logy</string>
+    <string name="settings_share_logs_empty">Zatím není zaznamenán žádný log</string>
+    <string name="settings_about_body">Verze %1$s (build %2$s)\nDatum buildu %3$s\n\nFT8, jednoduše.\n\nSamostatná aplikace FT8 transceiveru pro Android. Řízení TRX přes USB, Bluetooth a síť s automatickým sekvencováním a logováním.</string>
+    <string name="settings_website">Web</string>
+    <string name="settings_community">Komunita</string>
+    <string name="settings_built_by">Vytvořili</string>
+
+    <!-- ===== Settings: dialogs ===== -->
+    <string name="settings_block_exact_title">Blokovat přesné volací značky</string>
+    <string name="settings_block_exact_desc">Shoda celé značky. Oddělené čárkou nebo mezerou, např. W1AW, K1ABC.</string>
+    <string name="settings_block_prefix_title">Blokovat předpony volacích značek</string>
+    <string name="settings_block_prefix_desc">Shoda předpony, např. RA blokuje RA0AA..RA9ZZ. Oddělené čárkou nebo mezerou.</string>
+    <string name="settings_block_keyword_title">Blokovat klíčová slova</string>
+    <string name="settings_block_keyword_desc">Shoda podřetězce proti značce a textu zprávy, např. POTA, /P, QRP.</string>
+    <string name="settings_blocklist_hint">např. W1AW, RA, /P</string>
+    <string name="settings_filter_continent_title">Filtrovat kontinent</string>
+    <string name="settings_conn_usb_cable">USB kabel</string>
+    <string name="settings_conn_bluetooth">Bluetooth</string>
+    <string name="settings_conn_network">Síť</string>
+    <string name="settings_no_usb_serial">Nebyla zjištěna žádná sériová zařízení USB. Připojte USB kabel k rádiu a zkuste to znovu.</string>
+    <string name="settings_no_bluetooth_devices">Nebyla nalezena žádná spárovaná zařízení Bluetooth. Nejprve spárujte zařízení v nastavení Bluetooth systému Android.</string>
+    <string name="settings_edit_operator_identity">Upravit identitu operátora</string>
+    <string name="settings_callsign">Volací značka</string>
+    <string name="settings_callsign_hint">např. W1AW</string>
+    <string name="settings_grid_locator">Lokátor</string>
+    <string name="settings_grid_locator_hint">např. FN31pr</string>
+    <string name="settings_logging_server">Logovací server</string>
+    <string name="settings_logging_server_desc">Cloudlog, Wavelog a Nextlog přijímají stejná nahrání.</string>
+    <string name="settings_server_address">Adresa serveru</string>
+    <string name="settings_api_key">API klíč</string>
+    <string name="settings_api_key_hint">Váš API klíč Cloudlog</string>
+    <string name="settings_loading_stations">Načítání stanic...</string>
+    <string name="settings_station_id">ID stanice</string>
+    <string name="settings_station_id_hint">např. 1</string>
+    <string name="settings_select_a_station">Vyberte stanici</string>
+    <string name="settings_enter_manually">Zadat ručně</string>
+    <string name="settings_choose_from_server">Vybrat ze serveru</string>
+    <string name="settings_station_profile">Profil stanice</string>
+    <string name="settings_qrz_creds_desc">Slouží k načtení profilových fotek pro dekódované volací značky přes QRZ XML API. Vyžaduje předplatné QRZ XML.</string>
+    <string name="settings_username">Uživatelské jméno</string>
+    <string name="settings_username_hint">Vaše uživatelské jméno QRZ.com</string>
+    <string name="settings_password">Heslo</string>
+    <string name="settings_enabled_bands_dialog_desc">Skrytá pásma se neobjeví ve výběru frekvencí.</string>
+    <string name="settings_select_serial_port">Vyberte sériový port</string>
+    <string name="settings_tx_volume_advice">Upravujte naživo — vaše příští TX použije tuto úroveň. Sledujte ALC svého rádia a stahujte, dokud se právě nedotýká čáry.</string>
+    <string name="settings_input_volume">Vstupní hlasitost</string>
+    <string name="settings_input_volume_desc" formatted="false">Zesílení přijímaného zvuku před dekódováním (100 % = beze změny)</string>
+    <string name="settings_input_volume_advice">Použije se na příchozí zvuk před dekódováním. Sledujte měřič úrovně RX na vodopádu a mířte do zelené zóny; červená znamená ořezávání.</string>
+    <string name="input_level_too_low">Nízká</string>
+    <string name="input_level_good">Dobrá</string>
+    <string name="input_level_too_high">Vysoká</string>
+    <string name="input_level_clipping">Ořez</string>
+
+    <!-- ===== Settings: language picker ===== -->
+    <string name="settings_language">Jazyk</string>
+    <string name="settings_language_desc">Jazyk zobrazení aplikace</string>
+    <string name="settings_language_system">Výchozí systému</string>
+
+    <!-- Untranslated — added for parity; translate when localization pass runs -->
+    <string name="settings_show_volume_slider">Show Volume Slider</string>
+    <string name="settings_show_volume_slider_desc">Display TX volume slider on main screen</string>
+    <string name="settings_hunt_cq">Hunt + CQ</string>
+    <string name="settings_hunt_cq_desc">Call CQ when Hunt is idle (no stations heard). When a CQ is detected, automatically stop CQ and answer it.</string>
+    <string name="tx_volume_decrease">Decrease TX volume</string>
+    <string name="tx_volume_increase">Increase TX volume</string>
+    <string name="tx_audio_dropped">Selhalo TX audio — v tomto cyklu nebyl vyslán žádný signál (chyba USB audia)</string>
+    <string name="cq_offset_moved">Offset CQ přesunut na volné místo: %1$d Hz</string>
+    <string name="settings_auto_clear_tx">Automaticky volný TX offset</string>
+    <string name="settings_auto_clear_tx_desc">Při volání CQ vybere volné místo podle nedávné aktivity v pásmu a uhne, pokud se obsadí</string>
+    <string name="tune_content_description">Tune: spustí tuner rádia nebo vysílá souvislou nosnou pro ladění antény</string>
+    <string name="tune_stopped_timeout">Tune zastaven po %1$d s</string>
+    <string name="tune_blocked_tx">Před použitím Tune zastavte CQ/QSO</string>
+    <string name="tune_unavailable_route">Tune zatím není na této zvukové cestě podporován</string>
+    <string name="tune_atu_started">Anténní tuner rádia spuštěn</string>
+    <string name="tune_atu_unavailable">Tuner není k dispozici — připojte CAT rádio s interním tunerem</string>
+    <string name="settings_tune_method">Metoda Tune</string>
+    <string name="settings_tune_method_desc">Automaticky spustí interní tuner rádia přes CAT, je-li k dispozici, jinak přehraje tón s nízkým výkonem</string>
+    <string name="tune_method_automatic">Automaticky</string>
+    <string name="tune_method_internal">Interní tuner</string>
+    <string name="tune_method_tone">Tón s nízkým výkonem</string>
+
+    <!-- ===== Settings: FFT / waterfall developer knobs (issue #428) ===== -->
+    <string name="settings_section_fft_waterfall">FFT / VODOPÁD (VÝVOJÁŘ)</string>
+    <string name="settings_fft_window">Okénková funkce FFT</string>
+    <string name="settings_fft_window_desc">Okno před FFT pro zobrazení spektra/vodopádu; Hann omezuje spektrální únik</string>
+    <string name="settings_fft_window_rect">Obdélníkové (žádné)</string>
+    <string name="settings_fft_window_hann">Hann</string>
+    <string name="settings_fft_window_hamming">Hamming</string>
+    <string name="settings_fft_window_blackman">Blackman</string>
+    <string name="settings_fft_window_blackman_harris">Blackman-Harris</string>
+    <string name="settings_fft_averaging">Průměrování snímků</string>
+    <string name="settings_fft_averaging_desc">Vyhlazuje zobrazení mezi snímky FFT; Vypnuto zobrazuje každý snímek beze změny</string>
+    <string name="settings_fft_avg_off">Vypnuto</string>
+    <string name="settings_fft_avg_light">Lehké (EMA 0.5)</string>
+    <string name="settings_fft_avg_heavy">Silné (EMA 0.25)</string>
+    <string name="settings_bin_agg">Slučování binů spektra</string>
+    <string name="settings_bin_agg_desc">Jak se sousední biny FFT slučují do jednoho sloupce spektra</string>
+    <string name="settings_bin_agg_max">Maximum</string>
+    <string name="settings_bin_agg_avg">Průměr</string>
+    <string name="settings_bin_agg_rms">RMS</string>
+
+    <!-- World Radio League (issue #800) -->
+    <string name="log_sync_wrl_accepted">World Radio League: %1$d přijato</string>
+    <string name="settings_wrl_desc">Automaticky nahrávat QSOs do deníku World Radio League (vyžaduje klíč Developer API)</string>
+    <string name="settings_wrl_dialog_desc">Klíč vygenerujete ve World Radio League v části Integrations → Developer API. Jeden klíč platí pro celý účet.</string>
+    <string name="settings_wrl_logbook">Deník</string>
+    <string name="settings_wrl_logbook_default">Výchozí deník</string>
+    <string name="settings_wrl_loading_logbooks">Načítání deníků…</string>
+    <string name="settings_wrl_no_logbooks">Váš účet World Radio League zatím nemá žádný deník.</string>
+    <string name="settings_wrl_create_logbook">Vytvořit deník „%1$s“</string>
+    <string name="settings_wrl_creating_logbook">Vytváření deníku…</string>
+    <string name="common_configured">Konfigurováno</string>
+    <string name="status_new_zone">NOVÁ ZÓNA</string>
+    <string name="status_new_state">NOVÝ STÁT</string>
+    <string name="status_new_prefix">NOVÉ PFX</string>
+    <string name="tx_cq_options">Možnosti zprávy CQ (modifikátor, volný text, Field Day)</string>
+    <string name="sheet_close">Zavřít</string>
+    <string name="tx_hunt_options">Možnosti lovu (priorita, chytré filtry)</string>
+    <string name="tx_status_listening">Poslouchání</string>
+    <string name="tx_status_transmitting">Vysílání</string>
+    <string name="tx_status_tuning">Ladění</string>
+    <string name="tx_next_window">Další přenosové okno za</string>
+    <string name="tx_call_cq_subtitle">Začněte volat kontakty</string>
+    <string name="tx_more">VÍCE</string>
+    <string name="tx_band_mode_label">PÁSMO &amp; REŽIM</string>
+    <string name="tx_period_label">TX OBDOBÍ</string>
+    <string name="tx_period_first">1. (sudý)</string>
+    <string name="tx_period_second">2. (lichý)</string>
+    <string name="tx_dx">DX</string>
+    <string name="tx_hunt_off">Vypnuto</string>
+    <string name="band_sheet_title">Pásmo &amp; režim</string>
+    <string name="band_sheet_subtitle">Vaše rádio se přeladí, když vyberete pásmo</string>
+    <string name="band_sheet_all_bands">Všechna pásma &amp; vlastní frekvence</string>
+    <string name="band_hint_20m_best">Nejlepší nyní · denní, po celém světě</string>
+    <string name="band_hint_20m">Denní, po celém světě</string>
+    <string name="band_hint_40m">Večery a noci</string>
+    <string name="band_hint_17m">Tišší denní pásmo</string>
+    <string name="band_hint_15m">Dobré, když je slunce aktivní</string>
+    <string name="band_hint_10m">Dlouhé vzdálenosti, když je otevřené</string>
+    <string name="band_hint_80m">Místní, večery</string>
+    <string name="cat_status_linked">Rádio propojeno</string>
+    <string name="cat_status_not_linked">Radio není propojeno</string>
+    <string name="hunt_priority_title">PRIORITA LOVU</string>
+    <string name="hunt_priority_latest">Nejnovější</string>
+    <string name="hunt_priority_strongest">Nejsilnější</string>
+    <string name="hunt_priority_weakest">Nejslabší</string>
+    <string name="hunt_priority_farthest">Nejvzdálenější</string>
+    <string name="hunt_priority_pota">POTA/SOTA</string>
+    <string name="hunt_priority_new_dxcc">Nové DXCC</string>
+    <string name="hunt_priority_new_grid">Nová mřížka</string>
+    <string name="hunt_priority_desc_latest">Odpovězte na naposledy dekódované CQ (klasické chování)</string>
+    <string name="hunt_priority_desc_strongest">Odpovězte nejhlasitějšímu CQ nejdříve — nejlepší šance na dokončení</string>
+    <string name="hunt_priority_desc_weakest">Odpovězte nejslabšímu CQ nejdříve — QRP a lov výzev</string>
+    <string name="hunt_priority_desc_farthest">Odpovězte nejvzdálenějšímu CQ nejdříve — honba za DX</string>
+    <string name="hunt_priority_desc_pota">Odpovězte nejdříve aktivátorům parků/summitů — parky, které jste ještě nelovili, mají nejvyšší hodnocení</string>
+    <string name="hunt_priority_desc_new_dxcc">Odpovězte nejdříve na CQs z DXCC entit, se kterými jste ještě nezískali spojení</string>
+    <string name="hunt_priority_desc_new_grid">Odpovězte nejdříve na CQs z gridových čtverců, se kterými jste ještě nezískali spojení</string>
+    <string name="hunt_filters_title">CHYTŘÍ FILTRY</string>
+    <string name="hunt_avoid_pileups">Vyhněte se davům</string>
+    <string name="hunt_avoid_pileups_desc">Upřednostňujte CQ, na které tento cyklus nikdo jiný neodpovídá</string>
+    <string name="hunt_min_snr">Minimální signál</string>
+    <string name="hunt_min_snr_desc">Přeskočit CQ slabší než toto — méně QSO, která ztroskotají</string>
+    <string name="hunt_min_snr_off">Vypnuto</string>
+    <string name="hunt_footer_note">Hunt vždy přeskočí stanice, které jste již spojili, a vaše vyloučené předvolby.</string>
+    <string name="hunt_start">Spustit Hunt</string>
+    <string name="hunt_done">Hotovo</string>
+    <string name="cq_directed_too_long">CQ + text + volací znak se nevejde do jedné FT8 zprávy (max. 13 znaků, omezená sada znaků)</string>
+    <string name="cq_saved_label">Uloženo</string>
+    <string name="cq_saved_remove">Odstranit uložené CQ</string>
+    <string name="decode_sort_label_last_heard">ČAS</string>
+    <string name="decode_sort_label_callsign">VOLACÍ ZNAK</string>
+    <string name="decode_sort_label_snr">SNR</string>
+    <string name="decode_sort_label_distance">DX</string>
+    <string name="decode_sort_cd_last_heard">Třídit: naposledy slyšeno</string>
+    <string name="decode_sort_cd_callsign">Třídit: volací znak</string>
+    <string name="decode_sort_cd_snr">Třídit: SNR</string>
+    <string name="decode_sort_cd_distance">Třídit: vzdálenost, nejdále nejdříve</string>
+    <string name="decode_filter_new_zone">Nová zóna</string>
+    <string name="decode_filter_new_state">Nový stát</string>
+    <string name="decode_filter_new_grid">Nová mřížka</string>
+    <string name="decode_filter_new_prefix">Nový prefix</string>
+    <string name="decode_empty_zone_title">Žádné nové zóny</string>
+    <string name="decode_empty_zone_body">Žádné stanice volající z nezpracované CQ zóny ještě nebyly dekódovány.</string>
+    <string name="decode_empty_state_title">Žádné nové státy</string>
+    <string name="decode_empty_state_body">Žádné stanice volající z nezpracovaného státu USA ještě nebyly dekódovány.</string>
+    <string name="decode_empty_grid_title">Žádné nové čtverce</string>
+    <string name="decode_empty_grid_body">Žádné stanice volající z nezpracovaného čtvercového úseku ještě nebyly dekódovány.</string>
+    <string name="decode_empty_prefix_title">Žádné nové prefixy</string>
+    <string name="decode_empty_prefix_body">Žádné stanice volající z nezpracovaného volacího prefixu (WPX) ještě nebyly dekódovány.</string>
+    <string name="qso_stat_azimuth_long_path">LP %1$s</string>
+    <string name="qso_worked_before_title">Pracováno dříve</string>
+    <string name="qso_worked_before_last">last %1$s</string>
+    <string name="qso_worked_before_bands">Bands: %1$s</string>
+    <string name="qso_last_heard">Naposledy slyšeno</string>
+    <string name="qso_last_heard_unknown">--</string>
+    <string name="qso_last_heard_just_now">právě teď</string>
+    <string name="qso_last_heard_seconds">%1$ds ago</string>
+    <string name="qso_last_heard_minutes">%1$dm ago</string>
+    <string name="qso_last_heard_hours">%1$dh ago</string>
+    <string name="qso_last_heard_days">%1$dd ago</string>
+    <string name="qso_grayline_label">Šedá linie</string>
+    <string name="qso_grayline_now">Teď na šedé linii</string>
+    <string name="qso_grayline_daylight">Den</string>
+    <string name="qso_grayline_night">Noc</string>
+    <string name="qso_grayline_sunrise_in">sunrise in %1$s</string>
+    <string name="qso_grayline_sunset_in">sunset in %1$s</string>
+    <string name="qso_grayline_sunrise_now">při východu slunce</string>
+    <string name="qso_grayline_sunset_now">při západu slunce</string>
+    <string name="qso_grayline_midnight_sun">půlnoční slunce</string>
+    <string name="qso_grayline_polar_night">polární noc</string>
+    <string name="log_award_was_states">Pracováno ve všech státech</string>
+    <string name="log_award_states_needed">POŽADOVANÉ STÁTY</string>
+    <string name="log_section_best_dx">Nejlepší DX</string>
+    <string name="log_section_wac">Pracováno na všech kontinentech</string>
+    <string name="log_wac_progress">%1$d / %2$d continents</string>
+    <string name="log_wac_complete">Pracováno na všech šesti kontinentech 🌍</string>
+    <string name="log_wac_continent_worked">%1$s worked</string>
+    <string name="log_wac_continent_needed">%1$s not yet worked</string>
+    <string name="log_search_hint">Hledat volací znak, mřížku, pásmo…</string>
+    <string name="log_search_clear">Vyčistit hledání</string>
+    <string name="log_search_no_results_title">Žádné odpovídající QSO</string>
+    <string name="log_search_no_results_body">Nothing in your log matches “%1$s”</string>
+    <string name="log_award_wac">WAC</string>
+    <string name="log_award_wac_desc">Worked All Continents -- kontaktujte všechny šesti kontinenty</string>
+    <string name="log_cd_import_qsos">Importovat ADIF deník</string>
+    <string name="log_import_title_importing">IMPORTOVÁNÍ ADIF DENÍKU…</string>
+    <string name="log_import_title_complete">IMPORT DOKONČEN</string>
+    <string name="log_import_title_failed">IMPORT SELHAL</string>
+    <string name="log_import_progress_count">%1$d of %2$d records</string>
+    <string name="log_import_added">Added: %1$d new QSOs</string>
+    <string name="log_import_updated">Updated: %1$d existing QSOs</string>
+    <string name="log_import_invalid">Skipped: %1$d invalid records</string>
+    <string name="log_import_none_found">V vybraném souboru nebyly nalezeny žádné záznamy ADIF. Vyberte soubor protokolu .adi exportovaný z WSJT-X nebo jiné aplikační logovací aplikace.</string>
+    <string name="log_import_open_failed">Nepodařilo se otevřít vybraný soubor.</string>
+    <string name="pota_search_parks">Hledat parky</string>
+    <string name="pota_search_parks_hint">Filtrovat podle názvu nebo odkazu</string>
+    <string name="pota_recent_parks">NEDÁVNÉ PARKY</string>
+    <string name="pota_nearby_parks">PARKY V BLÍZKOSTI</string>
+    <string name="pota_no_recent_parks">Žádné nedávné aktivace</string>
+    <string name="pota_no_nearby_parks">V blízkosti nebyly nalezeny žádné parky</string>
+    <string name="pota_loading_nearby">Načítání parků v blízkosti…</string>
+    <string name="pota_loading_recent">Načítání nedávných parků…</string>
+    <string name="pota_location_unavailable">Poloha není k dispozici — povolte GPS</string>
+    <string name="map_overlay_grayline">ŠEDÁ</string>
+    <string name="map_overlay_grayline_cd">Překryv šedé linie (den/noc terminátor)</string>
+    <string name="map_filter">Filtr</string>
+    <string name="map_filter_title">Filtry PSK</string>
+    <string name="map_filter_done">Hotovo</string>
+    <string name="map_filter_time">Čas</string>
+    <string name="map_filter_band">Pásmo</string>
+    <string name="map_filter_mode">Režim</string>
+    <string name="map_filter_direction">Směr</string>
+    <string name="map_filter_all">Všechny</string>
+    <string name="map_reach_title">Váš signál dosahuje</string>
+    <string name="map_reach_furthest">Furthest · %1$s</string>
+    <string name="map_reach_best">Best · %1$s</string>
+    <string name="map_header_subtitle">%1$d decoded · %2$d worked this session</string>
+    <string name="map_layer_decodes">Dekódy</string>
+    <string name="map_layer_psk">PSK skvrny</string>
+    <string name="map_layer_worked">Fungovalo</string>
+    <string name="map_ctrl_me">Mě</string>
+    <string name="map_ctrl_me_cd">Znovu na střed na moji polohu</string>
+    <string name="map_greyline_in">%1$s · greyline in %2$s</string>
+    <string name="map_details">Podrobnosti</string>
+    <string name="map_option_projection">Projekce</string>
+    <string name="map_option_grayline">Šedá čára</string>
+    <string name="map_menu_cd">Možnosti mapy</string>
+    <string name="settings_section_appearance">VZHLED</string>
+    <string name="settings_section_backup">ZÁLOHA &amp; OBNOVIT</string>
+    <string name="settings_export">Exportovat nastavení</string>
+    <string name="settings_export_desc">Uložit všechna nastavení do záložního souboru</string>
+    <string name="settings_import">Importovat nastavení</string>
+    <string name="settings_import_desc">Obnovit nastavení ze záložního souboru</string>
+    <string name="settings_export_dialog_title">Exportovat nastavení</string>
+    <string name="settings_backup_include_sensitive">Zahrnout citlivé údaje</string>
+    <string name="settings_backup_include_sensitive_desc">API klíče a hesla (Cloudlog, QRZ, přihlášení k zařízení)</string>
+    <string name="action_export">Exportovat</string>
+    <string name="action_import">Importovat</string>
+    <string name="settings_import_confirm_title">Importovat nastavení?</string>
+    <string name="settings_import_confirm_msg">This will overwrite %1$d setting(s) with values from the backup created %2$s.</string>
+    <string name="settings_export_success">Nastavení exportována</string>
+    <string name="settings_export_failed">Export failed: %1$s</string>
+    <string name="settings_import_success">Nastavení importováno — restartujte aplikaci, aby se všechny změny projevily</string>
+    <string name="settings_import_failed">Import failed: %1$s</string>
+    <string name="settings_section_diagnostics">DIAGNOSTIKA</string>
+    <string name="settings_crash_reporting">Odeslat zprávy o haváriích</string>
+    <string name="settings_crash_reporting_desc">Sdílejte anonymní zprávy o haváriích a chybách, aby se pomohlo opravit chyby. Váš volací znak a lokalita nikdy nejsou odesílány.</string>
+    <string name="settings_theme">Téma</string>
+    <string name="settings_theme_desc">Barevné téma aplikace</string>
+    <string name="theme_name_dark">Tmavé</string>
+    <string name="theme_name_light">Světlé</string>
+    <string name="settings_cat_usb_diagnostics">Diagnostika USB</string>
+    <string name="settings_cat_usb_diagnostics_desc">Zkontrolujte zjišťování USB zařízení a komunikaci CAT</string>
+    <string name="usb_diag_title">Diagnostika USB</string>
+    <string name="usb_diag_desc">Živý stav zjišťování USB zařízení a komunikace CAT. Použijte jej k určení, kde selhává připojení zařízení.</string>
+    <string name="usb_diag_device_found">Zařízení nalezeno</string>
+    <string name="usb_diag_vendor_id">ID dodavatele</string>
+    <string name="usb_diag_product_id">ID produktu</string>
+    <string name="usb_diag_permission">Oprávnění USB</string>
+    <string name="usb_diag_cdc_serial">CDC sériové nalezeno</string>
+    <string name="usb_diag_audio_device">Audio zařízení nalezeno</string>
+    <string name="usb_diag_port_open">Port otevřen</string>
+    <string name="usb_diag_cat_response">Odezva CAT</string>
+    <string name="usb_diag_cat_port">Port CAT</string>
+    <string name="usb_diag_baud_value">%1$s · %2$d bd</string>
+    <string name="usb_diag_hint_ft710">Režim kabelu FT-710 je pouze pro zápis: aplikace nikdy nečte z portu CAT, takže Odezva CAT je zde zobrazena jako informace, nikoli jako chyba.</string>
+    <string name="usb_diag_hint_dual_port">Tento čip má dva porty. Radiostanice Yaesu (FT-891, FT-991A, FTDX10, FT-710) odpovídají na CAT na vylepšeném portu; Kenwood TS-890S/TS-990S na standardním portu. Druhý port přenáší pouze spouštění RTS/DTR. Vyberte druhý port v režimu Připojení › USB kabel a zkontrolujte přenosovou rychlost proti menu radiostanice.</string>
+    <string name="usb_diag_hint_no_response">Port je otevřený, ale rádio neodpovědělo. Zkontrolujte přenosovou rychlost a model rádia v Nastavení a také, zda je CAT zapnuto v menu radiostanice.</string>
+    <string name="usb_diag_value_none">—</string>
+    <string name="usb_diag_status_pass">prošlo</string>
+    <string name="usb_diag_status_fail">selhalo</string>
+    <string name="settings_time_suggest_auto">Automatická synchronizace je zapnutá — opravy z dekódování se aplikují automaticky, žádné klepnutí není potřeba.</string>
+    <string name="settings_time_suggest_auto_waiting">Čekám na souhlasné dekódování před první automatickou opravou…</string>
+    <string name="settings_time_suggest_auto_last">Last auto-correction: %1$s at %2$s</string>
+    <string name="settings_time_correction_gps_locked">Řízení hodin pomocí GPS je aktivní — vypněte níže pro ruční nastavení.</string>
+    <string name="settings_time_correction_ntp_locked">Řízení hodin pomocí NTP je aktivní — vypněte níže pro ruční nastavení.</string>
+    <string name="settings_selfsync_section">Samosynchronizační hodiny</string>
+    <string name="settings_selfsync_toggle">Automaticky synchronizovat hodiny z dekódování</string>
+    <string name="settings_selfsync_toggle_desc">Ve výchozím nastavení zapnuto. Udržuje hodiny zamknuté na stanicích, které slyšíte — samotný pásmo je zdrojem času, internet ani GPS není potřeba. Hodiny, které jsou zjevně nepřesné, se opraví při prvním obsazeném slotu; malé odchylky se jemně upravují. Nedostupné, pokud je aktivní řízení hodin GPS nebo NTP.</string>
+    <string name="settings_gps_clock_section">Řízení hodin pomocí GPS</string>
+    <string name="settings_gps_clock_toggle">Řídit hodiny podle GPS</string>
+    <string name="settings_gps_clock_toggle_desc">Použijte satelitní čas k synchronizaci cyklu FT8 s pravým UTC. Přepisuje manuální opravu, když je zapnuto. Vyžaduje oprávnění k poloze a zajištění GPS.</string>
+    <string name="settings_gps_clock_interval">Interval aktualizace</string>
+    <string name="settings_gps_clock_interval_value">%1$d min</string>
+    <string name="settings_gps_clock_waiting">Čeká se na zajištění GPS…</string>
+    <string name="settings_gps_clock_last_sync">Last GPS sync: %1$s UTC</string>
+    <string name="settings_gps_clock_offset">Applied offset: %1$s</string>
+    <string name="settings_ntp_clock_section">NTP řízení hodin</string>
+    <string name="settings_ntp_clock_toggle">Řídit hodiny z NTP</string>
+    <string name="settings_ntp_clock_toggle_desc">Periodicky se synchronizovat se síťovým časovým serverem pro synchronizaci cyklu FT8 s pravým UTC. Přepisuje manuální opravu, když je zapnuto. Vyžaduje přístup k internetu.</string>
+    <string name="settings_ntp_clock_server_label">NTP server</string>
+    <string name="settings_ntp_clock_server_hint">např. pool.ntp.org</string>
+    <string name="settings_ntp_clock_waiting">Čeká se na první synchronizaci NTP…</string>
+    <string name="settings_ntp_clock_last_sync">Last NTP sync: %1$s UTC</string>
+    <string name="settings_ntp_clock_offset">Applied offset: %1$s</string>
+    <string name="settings_ntp_clock_sync_failed">Poslední pokus o synchronizaci selhal — opakuje se…</string>
+    <string name="settings_controls_drawer">Ovládací zásuvka</string>
+    <string name="settings_controls_drawer_desc">Sbalit ovládací prvky do spodního panelu, který vytáhnete nahoru. Vypnuto zobrazuje celý ovládací pruh stále.</string>
+    <string name="controls_drawer_expand">Rozbalit ovládací prvky</string>
+    <string name="controls_drawer_collapse">Sbalit ovládací prvky</string>
+    <string name="controls_drawer_more">Další ovládací prvky</string>
+    <string name="settings_per_band_volume">Uložit úroveň výstupu pro každý pásmo</string>
+    <string name="settings_per_band_volume_desc">Zapamatovat si samostatně hlasitost TX pro každé pásmo a obnovit ji při změně pásma</string>
+    <string name="per_band_volume_restored">TX volume %1$d%% restored for %2$s</string>
+    <string name="settings_hold_tx_freq">Držet frekvenci TX</string>
+    <string name="settings_hold_tx_freq_desc">Při odpovídání stanici zachovat svůj TX offset místo přesunutí na jejich</string>
+    <string name="settings_clear_on_change">Vymazat dekódování při změně pásma/módu</string>
+    <string name="settings_clear_on_change_desc">Vymazat seznam dekódování a resetovat cíl TX na CQ při změně pásma nebo módu</string>
+    <string name="settings_pileup_strongest">Pracovat nejprve s nejsilnějším volajícím</string>
+    <string name="settings_pileup_strongest_desc">V hromadném volání automaticky pracovat s nejsilnějším čekajícím volajícím místo toho, kdo volal dříve. Dokončí nejlépe čitelné kontakty nejprve při rušném provozu. Fronta volajících je seřazena podle nejsilnějších, aby se tomu odpovídalo.</string>
+    <string name="settings_highlight_new_zone">Nová zóna</string>
+    <string name="settings_highlight_new_zone_desc">Zvýraznit ještě nepracované CQ zóny (Všechny zóny)</string>
+    <string name="settings_highlight_new_state">Nový stát</string>
+    <string name="settings_highlight_new_state_desc">Zvýraznit ještě nepracované státy USA (Všechny státy)</string>
+    <string name="settings_highlight_new_prefix">Nový prefix</string>
+    <string name="settings_highlight_new_prefix_desc">Zvýraznit ještě nepracované prefixy volacích značek (Všechny prefixy / WPX)</string>
+    <string name="settings_worked_mode">Chování</string>
+    <string name="settings_worked_mode_desc">Co dělat s pracovanými stanicemi</string>
+    <string name="settings_worked_mode_highlight">Zvýraznit</string>
+    <string name="settings_worked_mode_ignore">Ignorovat</string>
+    <string name="settings_worked_mode_hide">Skrýt</string>
+    <string name="settings_worked_scope">Srovnat podle</string>
+    <string name="settings_worked_scope_desc">Které stanice se počítají jako odpracované</string>
+    <string name="settings_worked_scope_on_band">Odpracováno na tomto pásmu</string>
+    <string name="settings_worked_scope_before">Odpracováno dříve (libovolné pásmo)</string>
+    <string name="settings_worked_scope_today">Odpracováno dnes nebo včera</string>
+    <string name="settings_worked_scope_from_list">V seznamu odpracovaných</string>
+    <string name="settings_worked_list_title">Seznam odpracovaných</string>
+    <string name="settings_worked_list_desc">Volací značky, které se mají považovat za odpracované (oddělené čárkou)</string>
+    <string name="settings_worked_same_mode">Pouze stejný mód</string>
+    <string name="settings_worked_same_mode_desc">Počítat pouze QSO provedené na aktuálním módu</string>
+    <string name="settings_show_beam_heading">Zobrazit směr svazku</string>
+    <string name="settings_show_beam_heading_desc">Přidat obloukový směr ke každému řádku dekódu, pro nasměrování směrové antény</string>
+    <string name="settings_alert_cq_reply">CQ odpověď</string>
+    <string name="settings_alert_cq_reply_desc">Zvuk + vibrace + oznámení, když vás volá stanice (jakákoli zpráva adresovaná vaší volací značce)</string>
+    <string name="settings_alert_qso_complete">QSO dokončeno</string>
+    <string name="settings_alert_qso_complete_desc">Zvuk + vibrace + oznámení při zaznamenání QSO</string>
+    <string name="alert_cq_reply_title">Calling you: %1$s</string>
+    <string name="alert_qso_complete_title">QSO dokončeno</string>
+    <string name="settings_alert_watchlist">Seznam sledovaných volacích značek</string>
+    <string name="settings_alert_watchlist_desc">Zvuk + vibrace + oznámení ve chvíli, kdy je dekódována sledovaná volací značka nebo prefix, na jakémkoli pásmu</string>
+    <string name="settings_watch_dialog_title">Seznam sledovaných volacích značek</string>
+    <string name="settings_watch_dialog_desc">Volací značky nebo předpony oddělené čárkou (např. 3Y0, W1AW, TX7). Upozornění se spustí okamžitě, jakmile je detekována shoda — shoda podle předpony, takže předpona DX expedition zachytí každou variantu.</string>
+    <string name="alert_watch_title">Watchlist: %1$s</string>
+    <string name="settings_cat_voice">Hlasový asistent</string>
+    <string name="settings_cat_voice_desc">Hlasová oznámení a ovládání hlasem bez použití rukou</string>
+    <string name="settings_section_voice_announce">Hlasová oznámení</string>
+    <string name="settings_section_voice_commands">Hlasové příkazy</string>
+    <string name="settings_voice_announce_calling">Stanice mě volá</string>
+    <string name="settings_voice_announce_calling_desc">Řekněte volací značku a hlášení signálu, když vás stanice volá</string>
+    <string name="settings_voice_announce_qso">QSO dokončeno</string>
+    <string name="settings_voice_announce_qso_desc">Promluv potvrzení, když je QSO zaznamenáno</string>
+    <string name="settings_voice_announce_new_dxcc">Nový DXCC CQ</string>
+    <string name="settings_voice_announce_new_dxcc_desc">Promluv, když nepracovaná DXCC entita volá CQ</string>
+    <string name="settings_voice_announce_new_prefix">Nové prefix CQ</string>
+    <string name="settings_voice_announce_new_prefix_desc">Promluv, když nepracovaný WPX prefix volá CQ</string>
+    <string name="settings_voice_commands">Tlačítko hlasového příkazu</string>
+    <string name="settings_voice_commands_desc">Zobrazit tlačítko mikrofonu s funkcí push-to-talk na hlavní obrazovce. Řekni \"odpovědět\", \"volat CQ\", \"zastavit\", \"přeskočit\" nebo \"zaznamenat\". Nedostupné, pokud FT8 příjem využívá zvuk Androidu (mikrofon telefonu nebo přes USB).</string>
+    <string name="settings_voice_tx_note">Oznámení se nikdy nepřehrávají při vysílání, takže nemohou prosakovat do zvuku transceiveru.</string>
+    <string name="voice_button_desc">Hlasový příkaz</string>
+    <string name="voice_button_mic_busy_desc">Hlasový příkaz není k dispozici: audio vstup je využíván FT8 příjmem</string>
+    <string name="voice_mic_busy">Hlasové příkazy nejsou dostupné: Přijímání FT8 probíhá přes zvuk z Androidu (mikrofon telefonu nebo USB přes Android). Přímý USB nebo zvuk z rádia přes síť to umožní.</string>
+    <string name="voice_listening">Naslouchám…</string>
+    <string name="voice_not_understood">Nepodařilo se zachytit příkaz. Zkuste „odpovědět“, „volat CQ“, „zastavit“, „přeskočit“ nebo „zalogovat“.</string>
+    <string name="voice_no_caller">Není žádná stanice k odpovědi</string>
+    <string name="voice_recognizer_unavailable">Rozpoznávání řeči není na tomto zařízení dostupné</string>
+    <string name="voice_recognizer_error">Chyba rozpoznávání řeči</string>
+    <string name="rx_service_channel_name">Pozadí příjmu</string>
+    <string name="rx_service_channel_desc">Udržuje dekódování JTTY spuštěné, i když je aplikace na pozadí nebo je obrazovka vypnutá</string>
+    <string name="rx_service_title">JTTYAF přijímá</string>
+    <string name="rx_service_text">Dekódování na pozadí</string>
+    <string name="settings_adif_export">ADIF logovací soubor</string>
+    <string name="settings_adif_export_desc">Připojit každý zaznamenaný QSO do jttyaf_log.adi pro zálohu a import monitoru desktopového logeru (LOG4OM)</string>
+    <string name="settings_qrz_logbook">QRZ Logbook</string>
+    <string name="settings_qrz_logbook_desc">API klíč logbooku z QRZ Logbook → Nastavení (ne heslo k účtu).</string>
+    <string name="settings_qrz_api_key_hint">Váš API klíč QRZ Logbook</string>
+    <string name="settings_section_power">VÝKON &amp; TEPLO</string>
+    <string name="settings_keep_screen_on">Nechat obrazovku zapnutou</string>
+    <string name="settings_keep_screen_on_desc">Udržovat displej aktivní, dokud je aplikace otevřená. Vypněte při dlouhých přenosných relacích — příjem běží na pozadí a telefon se mnohem méně zahřívá</string>
+    <string name="settings_deep_decode">Hloubkové dekódování</string>
+    <string name="settings_deep_decode_desc">Průchod odečtení a opětovného dekódování, který vytahuje slabé signály ze stínu silných. Spotřebovává až 75 % každého slotu při plném CPU — největší jednozdroj tepla. Vypněte pro běh při nižší teplotě s tím, že některé slabé dekódy nebudou zpracovány</string>
+    <string name="late_start_deferred">Too late this cycle (need %d ms clip) — waiting for next slot</string>
+    <string name="rate_prompt_eyebrow">DOBRÁ SESSION</string>
+    <string name="rate_prompt_headline_entities_bands">%1$s entities across %2$s bands</string>
+    <string name="rate_prompt_headline_entities">%1$s entities in your log</string>
+    <string name="rate_prompt_headline_contacts_bands">%1$s contacts across %2$s bands</string>
+    <string name="rate_prompt_stat_qsos">QSOs</string>
+    <string name="rate_prompt_stat_dxcc">DXCC</string>
+    <string name="rate_prompt_stat_bands">Pásma</string>
+    <string name="rate_prompt_minimal_title">Rychlost JTTYAF</string>
+    <string name="rate_prompt_minimal_body">You\'ve logged %1$d contacts with JTTYAF.</string>
+    <string name="rate_prompt_play_pitch">Rychlé hodnocení na Google Play pomáhá ostatním uživatelům najít JTTYAF.</string>
+    <string name="rate_prompt_remind_later">Připomeň mi později</string>
+    <string name="rate_prompt_dont_ask_again">Neptej se znovu</string>
+    <string name="rate_prompt_play_action">Ohodnotit na Google Play</string>
+    <string name="rate_prompt_feedback_action">Poslat zpětnou vazbu</string>
+    <string name="rate_prompt_feedback_title">Zpětná vazba pro vývojáře</string>
+    <string name="rate_prompt_feedback_body">Jde přímo k vývojáři. Vaše volací znak a verze aplikace jsou přiloženy.</string>
+    <string name="rate_prompt_feedback_hint">Řekněte nám, co by mohlo JTTYAF zlepšit…</string>
+    <string name="rate_prompt_feedback_send">Poslat zpětnou vazbu</string>
+    <string name="rate_prompt_feedback_skip">Přeskočit</string>
+    <string name="about_font_attribution">Písmo UI: Inter od Rasmuse Anderssona (SIL OFL 1.1)</string>
+    <string name="serial_port_label_port_of">Port %1$d of %2$d</string>
+    <string name="serial_port_picker_dual_port_hint">Čip s dvojitým portem: Zařízení Yaesu používají pro CAT port Enhanced, Kenwood TS-890S/TS-990S používají port Standard. Druhý port slouží pro klíčování RTS/DTR.</string>
+    <string name="settings_rx_channel">Kanál příjmu zvuku</string>
+    <string name="settings_rx_channel_desc">Kterou stranu stereofonního vstupu dekódovat. Použijte Levý nebo Pravý, pokud rádio poskytuje jen jeden kanál.</string>
+    <string name="settings_rx_channel_mix">Mix</string>
+    <string name="settings_tx_channel">Kanál vysílacího zvuku</string>
+    <string name="settings_tx_channel_desc">Která strana stereofonního výstupu přenáší vysílaný zvuk. Použijte Levý nebo Pravý pro ovládání jednoho rádia na rozdělení kabelu.</string>
+    <string name="settings_tx_channel_both">Oba</string>
+    <string name="settings_channel_left">Levý</string>
+    <string name="settings_channel_right">Správně</string>
+    <string name="settings_channel_mono_device">Toto zařízení má pouze jeden audio kanál, takže není možné vybrat stranu.</string>
+    <string name="settings_tx_channel_default_sink">Vyberte konkrétní audio výstupní zařízení, pokud chcete zvolit stranu. U výchozího výstupu aplikace nemůže určit, kam Android směruje zvuk, takže posílá do obou kanálů.</string>
+    <string name="settings_rx_channel_network_source">Audio pro toto rádio přichází přes jeho síťové připojení, nikoli přes audio vstup, takže není možné vybrat stranu.</string>
+    <string name="settings_full_duplex">Plný duplex</string>
+    <string name="settings_full_duplex_desc">Zobrazovat dekódování vlastního přenosu místo jeho skrývání. Pro práci se satelitem: zkontrolujte vlastní sílu signálu a frekvenci, na které se vrací.</string>
+    <string name="clock_sync_good">v synchronizaci</string>
+    <string name="clock_sync_fair">zkontrolovat hodiny</string>
+    <string name="clock_sync_poor">hodiny mimo</string>
+    <string name="clock_sync_unknown">žádné dekódování</string>
+    <string name="clock_sync_cd">Clock sync: average decode offset %1$s, %2$s</string>
+    <string name="clock_sync_cd_auto">Clock sync: average decode offset %1$s, %2$s, %3$s</string>
+    <string name="car_engine_idle">JTTYAF zatím nevysílá. Stav QSO se zde zobrazí, jakmile bude provozní.</string>
+    <string name="car_engine_idle_action">Spustit JTTYAF</string>
+    <string name="car_monitoring">Monitorování — TX vypnuto</string>
+    <string name="car_seq_step">Step %1$s (%2$d/%3$d)</string>
+    <string name="car_slot_tx">TX slot · %1$d s</string>
+    <string name="car_slot_rx">RX slot · %1$d s</string>
+    <string name="car_decodes_action">Dekódování</string>
+    <string name="car_decodes_title">Poslední dekódování</string>
+    <string name="car_no_decodes">Žádné dešifrování zatím</string>
+</resources>
