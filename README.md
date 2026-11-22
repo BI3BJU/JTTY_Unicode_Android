@@ -97,6 +97,12 @@ The debug APK is written to:
 jtty_unicode/app/build/outputs/apk/debug/app-debug.apk
 ```
 
+> **Windows build note:** the four `hamlib/prebuilt/<abi>/libhamlib.a` archives are
+> intentionally not committed (see `hamlib/.gitignore`). On Windows, run
+> `jtty_unicode/app/src/main/cpp/hamlib/build_android.sh` once under WSL before
+> `gradlew.bat assembleDebug`, or copy the `prebuilt/` directory from a working
+> checkout. Linux, macOS and CI build it automatically.
+
 Install on a connected device:
 
 ```bash
