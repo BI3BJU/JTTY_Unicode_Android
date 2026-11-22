@@ -72,6 +72,25 @@ carries four content bytes per frame:
 
 Native text uses the original JTTY grammar and remains interoperable with WSJT-X 3.2.
 
+## Interoperability with JTTY Unicode for Windows
+
+JTTY Unicode for Android and JTTY Unicode for Windows use the same over-the-air
+protocol and decode each other directly:
+
+- **Native JTTY frames** are identical to WSJT-X 3.2 and work in both directions.
+- **Unicode extension frames** (bit 33, four UTF-8 bytes per frame, CRC-8, up to
+  63 bytes in 1–16 frames) work in both directions.
+- No gateway, bridge or text conversion is required: both programs transmit and
+  receive the same GFSK waveform at the same audio offset.
+- The Android whole-passband decoder (300–2700 Hz) and the Windows wideband search
+  decode the signal without forcing the Rx frequency marker onto the sender's
+  audio offset.
+- Verified with **Android 0.1.0.261122** and **Windows 3.2.0-rc1.261122**.
+
+For Unicode text, both ends need a build with the Unicode extension
+(Android 0.1.0.261122+ / Windows 3.2.0-rc1.261122+). Native JTTY remains
+compatible with unmodified WSJT-X 3.2.
+
 ---
 
 ## Install
